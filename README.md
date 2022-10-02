@@ -1,11 +1,11 @@
 # ProjectForCDM
-Название проекта: Лента новостей
+**Название проекта:** Лента новостей
 
-Frontend: Angular
+**Frontend:** Angular
 
-Backend: https://github.com/public-apis/public-apis (Возможно самописный backend на laravel)
+**Backend:** https://github.com/public-apis/public-apis (Возможно самописный backend на laravel)
 
-To Do:
+**To Do:**
 * Лента новостей
 * Работа с коментариями к каждой новости (их можно будет отключить)
 * Поиск по новостям
