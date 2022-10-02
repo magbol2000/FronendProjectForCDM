@@ -3,7 +3,7 @@
 
 Frontend: Angular
 
-Backend: https://github.com/public-apis/public-apis (Возможно самописный backend на laravels)
+Backend: https://github.com/public-apis/public-apis (Возможно самописный backend на laravel)
 
 To Do:
 * Лента новостей
