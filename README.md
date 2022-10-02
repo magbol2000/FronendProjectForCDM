@@ -1,6 +1,8 @@
 # ProjectForCDM
 Название проекта: Лента новостей
+
 Frontend: Angular
+
 Backend: https://github.com/public-apis/public-apis (Возможно самописный backend на laravels)
 
 To Do:
