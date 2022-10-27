@@ -32,3 +32,15 @@
     border-radius: 4px;
   }
 }
+
+@include mobile {
+  .form{
+    width: 288px;
+  }
+}
+
+@include desktop {
+  .form {
+    width: 670px;
+  }
+}

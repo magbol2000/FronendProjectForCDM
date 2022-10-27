@@ -4,7 +4,7 @@
 .about-site {
   display: flex;
   flex-direction: column;
-
+  gap: 24px;
   &__contacts {
     display: flex;
     flex-direction: row;
@@ -16,5 +16,8 @@
     @include i-font-SSP-w-md;
     text-transform: capitalize;
   }
-
+  &__contacts-item {
+    text-decoration: none;
+    color: var(--primary-color)
+  }
 }

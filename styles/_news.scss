@@ -15,6 +15,7 @@
 
   &__title {
     @include i-font-SSP-bw-xl;
+    color: var(--primary-color);
   }
 
   &__short-description {
@@ -35,6 +36,13 @@
     @include i-font-SSP-w-md;
     padding: 8px;
     background: var(--background-text-color);
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  &__url {
+    text-decoration: none;
+    z-index: 100;
   }
 
   &__full-text {
