@@ -5,7 +5,7 @@
 
 **Backend:** https://github.com/public-apis/public-apis (Возможно самописный backend на laravel)
 
-**Использованы шаблоны figma: **
+**При верстке использовались шаблоны figma:**
 https://www.figma.com/community/file/1069230442472801697
 https://www.figma.com/community/file/920000797572672028
 
