@@ -1,0 +1,29 @@
+@import "_mixins.scss";
+@import "_fonts.scss";
+
+.reply {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 48px;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  &__header {
+    @include i-font-SSP-w-lg;
+    color: var(--primary-color);
+  }
+  &__text {
+    @include i-font-SSP-w-md;
+  }
+
+}
+
+@include mobile {
+
+}
+@include desktop {
+  .reply {
+    width: 670px;
+  }
+}

@@ -1,0 +1,34 @@
+@import "_mixins.scss";
+@import "_fonts.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &__textarea {
+    max-width: 100%;
+    height: 150px;
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    @include i-font-SSP-w-lg;
+  }
+  &__label-checkbox {
+    @include i-font-SSP-w-lg;
+    accent-color: var(--primary-color);
+  }
+  &__field {
+    background: var(--background-text-color);
+    border: 0px;
+  }
+  &__button {
+    width: 90px;
+    height: 34px;
+    color: white;
+    background: var(--selection-text-color);
+    outline: none;
+    border-radius: 4px;
+  }
+}

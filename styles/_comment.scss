@@ -1,0 +1,32 @@
+@import "_mixins.scss";
+@import "_fonts.scss";
+
+.comment {
+  display: flex;
+  gap: 24px;
+
+  &__describe {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+  }
+
+  &__user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+
+  &__user-name {
+    @include i-font-SSP-w-md;
+    color: var(--primary-color);
+  }
+
+  &__data {
+    @include i-font-SSP-w-md;
+  }
+
+  &__message {
+    @include i-font-SSP-w-lg;
+  }
+}

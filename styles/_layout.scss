@@ -1,0 +1,48 @@
+@import "_mixins.scss";
+@import "_fonts.scss";
+
+.general-body {
+  @include i-font-SSP-bw-xl;
+  color: var(--text-color);
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  &__main {
+    flex: 1 1 auto;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+  }
+  &__header {
+    display: flex;
+  }
+
+  &__footer {
+    display: flex;
+  }
+}
+
+@include mobile {
+  .layout {
+    &__header {
+      flex-direction: column;
+      padding-top: 24px;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 24px;
+    }
+  }
+}
+
+@include desktop {
+  .layout {
+    &__header {
+      padding-top: 39px;
+      padding-left: 150px;
+      padding-right: 150px;
+      padding-bottom: 39px;
+    }
+  }
+}

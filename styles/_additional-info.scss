@@ -1,0 +1,19 @@
+@import "_fonts.scss";
+
+.additional-info {
+  @include i-font-SSP-w-md;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 10px;
+
+  &__new {
+    @include i-font-SSP-bw-xs;
+    color: var(--selection-text-color);
+    background: var(--background-text-color);
+    border-radius: 3px;
+    padding: 7px;
+    letter-spacing: 0.115em;
+    text-transform: uppercase;
+  }
+}

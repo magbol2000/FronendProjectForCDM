@@ -1,0 +1,13 @@
+@import "_mixins.scss";
+@import "_fonts.scss";
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 670px;
+  &__header {
+    @include i-font-SSP-w-lg;
+  }
+}
+

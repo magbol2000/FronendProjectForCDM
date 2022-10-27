@@ -1,0 +1,32 @@
+@import "styles/_utils.scss";
+@import "styles/_layout.scss";
+@import "styles/_header.scss";
+@import "styles/_nav.scss";
+@import "styles/_buttons.scss";
+@import "styles/_bar-links";
+@import "styles/_menu.scss";
+@import "styles/_short-news-of-the-day.scss";
+@import "styles/_wrapper.scss";
+@import "styles/_news.scss";
+@import "styles/_tags.scss";
+@import "styles/_footer.scss";
+@import "styles/_about-site.scss";
+@import "styles/_additional-info.scss";
+@import "styles/_news-dashboard.scss";
+@import "styles/_comments.scss";
+@import "styles/_reply.scss";
+@import "styles/_form.scss";
+@import "styles/_comment.scss";
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+:root {
+  --primary-color: #222222;
+  --container-bg-color: #FFFFFF;
+  --border-color: #EAEAEE;
+  --background-text-color:  #F5F5F7;
+  --selection-text-color: #7247CA;
+  --headers-text-color: rgba(0, 0, 0, 1);
+  --text-color: rgba(85, 85, 85, 1);
+}

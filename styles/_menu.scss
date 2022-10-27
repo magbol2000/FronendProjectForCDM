@@ -1,0 +1,22 @@
+@import "_fonts.scss";
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    @include i-font-Oswald-w-xs;
+    margin-bottom: 0px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-color-headers);
+  }
+}
+
+@include desktop {
+  .menu {
+    &__hamburger {
+      display: none !important;
+    }
+  }
+}

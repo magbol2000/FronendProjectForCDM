@@ -1,0 +1,554 @@
+.hidden {
+  display: none !important; }
+
+.spacer {
+  flex: 1 1 auto; }
+
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.general-body {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  color: var(--text-color); }
+
+.layout {
+  display: flex;
+  height: 100vh;
+  flex-direction: column; }
+  .layout__main {
+    flex: 1 1 auto;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color); }
+  .layout__header {
+    display: flex; }
+  .layout__footer {
+    display: flex; }
+
+@media screen and (max-width: 767px) {
+  .layout__header {
+    flex-direction: column;
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px; } }
+@media screen and (min-width: 768px) {
+  .layout__header {
+    padding-top: 39px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 39px; } }
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-left: 16px;
+    padding-right: 16px; } }
+@media screen and (min-width: 768px) {
+  .header {
+    padding-left: 150px;
+    padding-right: 150px;
+    flex-direction: row; } }
+@media screen and (max-width: 767px) {
+  .nav__bar-links {
+    padding-top: 45px; } }
+.bar-links__categories-button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0px;
+  color: var(--text-color); }
+
+.menu__hamburger {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0px;
+  color: var(--text-color); }
+
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.bar-links {
+  display: flex;
+  gap: 39px; }
+  .bar-links__link {
+    text-decoration: none; }
+  .bar-links__donate {
+    display: flex;
+    gap: 6px; }
+    .bar-links__donate:hover {
+      color: var(--selection-text-color); }
+  .bar-links__more-links {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .bar-links__text-item {
+    color: var(--text-color);
+    font-family: 'Source Serif Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase; }
+  .bar-links__item {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .bar-links__double-items {
+    display: flex;
+    gap: 8px; }
+
+@media screen and (min-width: 768px) {
+  .bar-links {
+    gap: 39px; } }
+@media screen and (max-width: 767px) {
+  .bar-links {
+    flex-direction: column; } }
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.menu {
+  display: flex;
+  align-items: center; }
+  .menu__logo {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-color-headers); }
+
+@media screen and (min-width: 768px) {
+  .menu__hamburger {
+    display: none !important; } }
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.short-news-of-the-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 39px; }
+  .short-news-of-the-day__picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    object-fit: cover; }
+  .short-news-of-the-day__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .short-news-of-the-day__text {
+    text-align: center; }
+  .short-news-of-the-day__social-media {
+    display: flex;
+    gap: 30px; }
+  .short-news-of-the-day__listen-on-text {
+    text-align: center;
+    font-family: 'Source Serif Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase; }
+
+@media screen and (max-width: 767px) {
+  .short-news-of-the-day__audio {
+    width: 288px; } }
+@media screen and (min-width: 768px) {
+  .short-news-of-the-day__audio {
+    width: 700px; } }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px; }
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding-top: 100px;
+    gap: 100px;
+    padding-bottom: 100px; } }
+@media screen and (max-width: 767px) {
+  .wrapper {
+    gap: 64px;
+    padding-top: 48px;
+    padding-bottom: 48px; } }
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.full-news {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.news {
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+  gap: 14px; }
+  .news__title {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px; }
+  .news__short-description {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px; }
+  .news__general-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; }
+  .news__pagination {
+    display: flex;
+    gap: 2px; }
+  .news__page-number {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px;
+    background: var(--background-text-color); }
+  .news__full-text {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px; }
+
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%; }
+  .tags__item {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: var(--background-text-color);
+    text-transform: capitalize; }
+
+.footer {
+  padding-top: 64px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: center; }
+
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.about-site {
+  display: flex;
+  flex-direction: column; }
+  .about-site__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 23px; }
+  .about-site__created-by-text {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: capitalize; }
+
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.additional-info {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 10px; }
+  .additional-info__new {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 13px;
+    color: var(--selection-text-color);
+    background: var(--background-text-color);
+    border-radius: 3px;
+    padding: 7px;
+    letter-spacing: 0.115em;
+    text-transform: uppercase; }
+
+.news-dashboard {
+  display: flex;
+  justify-content: center; }
+
+@media screen and (max-width: 767px) {
+  .news-dashboard__spacer {
+    display: none; } }
+@media screen and (min-width: 768px) {
+  .news-dashboard__general-info {
+    position: relative; }
+  .news-dashboard__tags {
+    position: absolute; } }
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.comments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 670px; }
+  .comments__header {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px; }
+
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.reply {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 48px;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color); }
+  .reply__header {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--primary-color); }
+  .reply__text {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px; }
+
+@media screen and (min-width: 768px) {
+  .reply {
+    width: 670px; } }
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; }
+  .form__textarea {
+    max-width: 100%;
+    height: 150px; }
+  .form__label {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px; }
+  .form__label-checkbox {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    accent-color: var(--primary-color); }
+  .form__field {
+    background: var(--background-text-color);
+    border: 0px; }
+  .form__button {
+    width: 90px;
+    height: 34px;
+    color: white;
+    background: var(--selection-text-color);
+    outline: none;
+    border-radius: 4px; }
+
+/*
+    small width (sw)
+    width - 400 (w)
+    big width - 600 (bw)
+
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+ */
+.comment {
+  display: flex;
+  gap: 24px; }
+  .comment__describe {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; }
+  .comment__user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px; }
+  .comment__user-name {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--primary-color); }
+  .comment__data {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px; }
+  .comment__message {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0; }
+
+:root {
+  --primary-color: #222222;
+  --container-bg-color: #FFFFFF;
+  --border-color: #EAEAEE;
+  --background-text-color: #F5F5F7;
+  --selection-text-color: #7247CA;
+  --headers-text-color: rgba(0, 0, 0, 1);
+  --text-color: rgba(85, 85, 85, 1); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+@mixin button-clear {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0px;
+  color: var(--text-color);
+}
+
+.bar-links__categories-button {
+  @include button-clear;
+}
+
+.menu__hamburger {
+  @include button-clear;
+
+}

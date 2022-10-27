@@ -1,0 +1,20 @@
+@import "_mixins.scss";
+@import "_fonts.scss";
+
+.about-site {
+  display: flex;
+  flex-direction: column;
+
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 23px;
+  }
+
+  &__created-by-text {
+    @include i-font-SSP-w-md;
+    text-transform: capitalize;
+  }
+
+}

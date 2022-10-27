@@ -1,0 +1,26 @@
+@import "_mixins.scss";
+
+.header {
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@include mobile {
+  .header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@include desktop {
+  .header {
+    padding-left: 150px;
+    padding-right: 150px;
+    flex-direction: row;
+  }
+
+}
+
