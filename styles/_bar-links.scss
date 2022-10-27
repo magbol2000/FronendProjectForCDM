@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_fonts.scss";
 
+
 .bar-links {
   display: flex;
   gap: 39px;
@@ -22,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   &__text-item {
@@ -44,6 +46,7 @@
 
 @include desktop {
   .bar-links {
+    position: relative;
     gap: 39px;
   }
 }

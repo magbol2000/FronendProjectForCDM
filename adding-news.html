@@ -69,82 +69,54 @@
     </header>
     <main class="layout__main">
         <div class="wrapper">
-            <div class="short-news-of-the-day">
-                <img class="short-news-of-the-day__picture" src="images/motivational__picture.png" alt="short-news-of-the-day_picture">
-                <div class="short-news-of-the-day__header">
-                    <h3 class="short-news-of-the-day__text">
-                        How to rapidly test any experience!
-                    </h3>
-                </div>
-                <audio class="short-news-of-the-day__audio" controls src="/media/cc0-audio/t-rex-roar.mp3"> </audio>
-                <div>
-                    <h3 class="short-news-of-the-day__listen-on-text">Listen on</h3>
-                    <div class="short-news-of-the-day__social-media social-media">
-                        <a href="#" class="spotify-icon social-media__item">
-                            <i class="fa-brands fa-spotify"></i>
-                        </a>
-                        <a href="#" class="sountcloud-icon social-media__item">
-                            <i class="fa-brands fa-soundcloud"></i>
-                        </a>
-                        <a href="#"  class="applemusic-icon social-media__item">
-                            <i class="fa-brands fa-apple"></i>
-                        </a>
+<!-------------------------------ADDED NEWS------------------------------->
+            <div class="create-new-news">
+                <form class="form">
+                    <label class="form__label">Name of the news*
+                        <input class="form__input form__field" type="text">
+                    </label>
+                    <label class="form__label form__user-text">
+                        Short-describtion*
+                        <textarea class="form__textarea form__field"></textarea>
+                    </label>
+                    <label class="form__label">Category*
+                        <select>
+                            <option value="Business">Business</option>
+                            <option value="Education">Education</option>
+                            <option value="Markets">Markets</option>
+                        </select>
+                    </label>
+                    <label class="form__label form__user-text">
+                        Full-news*
+                        <textarea class="form__textarea form__field"></textarea>
+                    </label>
+                    <label class="form__label">Load audio
+                        <input type="file">
+                    </label>
+                    <label class="form__label">Load general img
+                        <input type="file">
+                    </label>
+                    <div class="news__tags tags">
+                        <div class="tags__item">
+                            #HCI
+                        </div>
+                        <div class="tags__item">
+                            #HCI
+                        </div>
+                        <div class="tags__item">
+                            +
+                        </div>
                     </div>
-                </div>
+                    <label class="form__label-checkbox">
+                        <input type="checkbox">
+                        Is disable comments?
+                    </label>
+                    <button class="form__button">
+                        Send
+                    </button>
+                </form>
             </div>
-
-            <div class="news-dashboard">
-                <div class="news">
-                    <div class="news__additional-info additional-info">
-                        <div class="additional-info__new">
-                            New
-                        </div>
-                        <div class="additional-info__category">
-                            Business
-                        </div>
-                        <div>|</div>
-                        <div class="additional-info__data">
-                            Jan 18, 2021
-                        </div>
-                    </div>
-                    <div class="news-dashboard__general-info news__general-info">
-                        <a href="#" class="news__url">
-                            <h3 class="news__title">
-                                23 - Makemeup Podcast Theme
-                            </h3>
-                        </a>
-
-                        <div class="news__short-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
-                        </div>
-
-                        <div class="news-dashboard__tags news__tags tags">
-                            <div class="news-dashboard__spacer news__spacer spacer"></div>
-                            <div class="tags__item">
-                                #HCI
-                            </div>
-                            <div class="tags__item">
-                                #HCI
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news__pagination">
-                        <a href="#" class="news__page-number">
-                            1
-                        </a>
-                        <a href="#"  class="news__page-number">
-                            2
-                        </a>
-                        <a href="#"  class="news__page-number">
-                            3
-                        </a>
-                        <a href="#"  class="news__page-number">
-                            ...
-                        </a>
-                    </div>
-                </div>
-            </div>
+<!-------------------------------ADDED NEWS------------------------------->
         </div>
     </main>
     <footer class="layout__footer footer">
