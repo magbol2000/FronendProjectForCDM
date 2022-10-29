@@ -21,10 +21,10 @@
   }
   &__field {
     background: var(--background-text-color);
-    border: 0px;
+    border: 0px; // лучше border: none, это стандартнее
   }
   &__button {
-    width: 90px;
+    width: 90px; // это плохо, кнопка не может ограничиваться таким образом, т.к. контента может быть больше, корректнее через padding задать отступ слева справа, а то текста может быть явно больше чем сейчас по дизайну у тебя
     height: 34px;
     color: white;
     background: var(--selection-text-color);

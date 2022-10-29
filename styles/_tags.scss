@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
-  width: 100%;
+  width: 100%; // флекс сам по себе уже 100% ширины, стало быть лишнее, либо что-то родительский блок не так делает
   &__item {
     @include i-font-SSP-w-md;
     padding-top: 8px;
@@ -13,6 +13,6 @@
     padding-left: 16px;
     padding-right: 16px;
     background: var(--background-text-color);
-    text-transform: capitalize;
+    text-transform: capitalize; // если так, то почему в html задал заглавнными буквами всё?
   }
 }
