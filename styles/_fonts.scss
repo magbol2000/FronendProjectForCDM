@@ -10,7 +10,8 @@
     Extra large (xl)
     Extra extra large (xxl)
  */
-
+//не, к сожалению плохо сделано, для body надо было один раз подключить шрифт основной, всё что меняется
+//это font-weight, font-size, line-height, причем это делается на body почти в 100% случаев, вообще миксины здесь излишни
 @mixin i-font-SSP-bw-xs{
   font-family: 'Source Serif Pro';
   font-style: normal;

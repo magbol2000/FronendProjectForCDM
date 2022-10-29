@@ -2,7 +2,7 @@
 @import "_fonts.scss";
 
 .general-body {
-  @include i-font-SSP-bw-xl;
+  @include i-font-SSP-bw-xl; //
   color: var(--text-color);
 }
 
@@ -15,6 +15,8 @@
     border-top: 2px solid var(--border-color);
     border-bottom: 2px solid var(--border-color);
   }
+
+  //задание флексов здесь лишнее, всё равно внутри самих блоков header, footer указываешь это ещё раз
   &__header {
     display: flex;
   }
@@ -28,11 +30,14 @@
 @include mobile {
   .layout {
     &__header {
-      flex-direction: column;
+      flex-direction: column; // это неверно, скорее надо чтобы display: flex был только для desktop задан
       padding-top: 24px;
       padding-left: 16px;
       padding-right: 16px;
       padding-bottom: 24px;
+
+      //можно написать
+      //padding: 24px 16px;
     }
   }
 }
