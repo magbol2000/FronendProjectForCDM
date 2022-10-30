@@ -1,5 +1,4 @@
-@import "_mixins.scss";
-@import "_fonts.scss";
+@import "_mixins.scss";  ;
 
 .reply {
   padding-top: 48px;
@@ -7,20 +6,24 @@
   flex-direction: column;
   width: 670px;
   padding-bottom: 48px;
-  border-top: 2px solid var(--border-color);
-  border-bottom: 2px solid var(--border-color);
   &__header {
-    @include i-font-SSP-w-lg;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
     color: var(--primary-color);
   }
   &__text {
-    @include i-font-SSP-w-md;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
   }
 
 }
 
 @include mobile {
-
+  .reply {
+    width: 280px;
+  }
 }
 @include desktop {
   .reply {

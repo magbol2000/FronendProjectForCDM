@@ -1,0 +1,12 @@
+@import "_mixins.scss";
+
+@include desktop {
+  .popup {
+    position: relative;
+    visibility: hidden;
+
+    &:hover {
+      visibility: visible;
+    }
+  }
+}

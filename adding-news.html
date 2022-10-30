@@ -22,12 +22,10 @@
 <div class="layout">
     <header class="layout__header">
         <div class="menu">
-            <h1 class="menu__logo logo">
-                AudioNews.
-            </h1>
+            <img class="menu__logo logo" src="images/logo.png" alt="logo">
             <div class="spacer"></div>
             <button class="menu__hamburger">
-                <i class="fa-solid fa-bars"></i></i>
+                <i class="fa-solid fa-bars"></i>
             </button>
         </div>
         <div class="spacer"></div>
@@ -35,11 +33,9 @@
             <nav class="nav">
                 <div class="nav__bar-links bar-links">
                     <div class="bar-links__more-links bar-links__item">
-                        <div class="modalbox">
+                        <div class="popup">
                             <button class="bar-links__categories-button bar-links__text-item bar-links__double-items">
-                                <div>
-                                    Categories
-                                </div>
+                                Categories
                                 <i class="fa-solid fa-chevron-up"></i>
                             </button>
                             <div class="categories-list">
@@ -53,16 +49,11 @@
                         </div>
                     </div>
                     <a href="#" class="bar-links__item bar-links__text-item bar-links__link ">Contact</a>
-                    <div class="bar-links__item">
-                        <a href="#" class="bar-links__text-item bar-links__donate bar-links__link bar-links__double-items">
-                            <div class="bar-links__love-icon">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div>
-                                Donate
-                            </div>
-                        </a>
-                    </div>
+
+                    <button class="bar-links__item bar-links__text-item bar-links__donate bar-links__link bar-links__double-items">
+                        <i class="fa-regular fa-heart"></i>
+                        Donate
+                    </button>
                 </div>
             </nav>
         </div>
@@ -96,7 +87,8 @@
                     <label class="form__label">Load general img
                         <input type="file">
                     </label>
-<!--                    это может быть сложно реализовать, сложнее чем кажется-->
+<!--                    это может быть сложно реализовать, сложнее чем кажется -->
+<!--                    Возможно, если не получится - думаю переделать-->
                     <div class="news__tags tags">
                         <div class="tags__item">
                             #HCI
@@ -104,17 +96,15 @@
                         <div class="tags__item">
                             #HCI
                         </div>
-<!--                        это кнопка полагаю-->
-                        <div class="tags__item">
+                        <button type="button" class="tags__item">
                             +
-                        </div>
+                        </button>
                     </div>
                     <label class="form__label-checkbox">
                         <input type="checkbox">
                         Is disable comments?
                     </label>
-<!--                    не забывать про type, его к кнопкам обязательно писать-->
-                    <button class="form__button">
+                    <button type="submit" class="form__button">
                         Send
                     </button>
                 </form>

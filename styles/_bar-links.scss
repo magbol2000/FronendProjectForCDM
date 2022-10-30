@@ -1,6 +1,4 @@
 @import "_mixins.scss";
-@import "_fonts.scss"; // корректнее в _fonts.scss импортировать один раз в _mixins.scss, чем подключать файлы по отдельности, нет профита в таком разбиении
-
 
 .bar-links {
   display: flex;
@@ -26,9 +24,15 @@
     flex-direction: column;
   }
 
+  &__categories-button {
+    visibility: visible;
+  }
+
   &__text-item {
     color: var(--text-color);
-    @include i-font-SSP-bw-sm;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
@@ -36,11 +40,11 @@
     display: flex;
     align-items: center;
     justify-content: center; // это свойство здесь лишнее, для мобильной версии флексы не нужны, т.к. все задается построчно, т.е. display: block или display: grid
+                             // без этого свойства строчка contacts будет прижата к левому краю
   }
 
-  // такие вещи делаются как блок, в частности идея позиционировать иконку+текст и задать между ними отступ
   &__double-items {
-    display: flex;
+    display: block;
     gap: 8px;
   }
 }

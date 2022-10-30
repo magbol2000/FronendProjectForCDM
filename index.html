@@ -22,14 +22,10 @@
 <div class="layout">
     <header class="layout__header">
         <div class="menu">
-            <h1 class="menu__logo logo">
-<!--                зачем точка в конце лого?-->
-                AudioNews.
-            </h1>
+            <img class="menu__logo logo" src="images/logo.png" alt="logo">
             <div class="spacer"></div>
             <button class="menu__hamburger">
-<!--                лишний закрывающий тег i-->
-                <i class="fa-solid fa-bars"></i></i>
+                <i class="fa-solid fa-bars"></i>
             </button>
         </div>
         <div class="spacer"></div>
@@ -37,13 +33,9 @@
             <nav class="nav">
                 <div class="nav__bar-links bar-links">
                     <div class="bar-links__more-links bar-links__item">
-<!--                        это скорее называется popup и работает через :hover, не через клик-->
-                        <div class="modalbox">
+                        <div class="popup">
                             <button class="bar-links__categories-button bar-links__text-item bar-links__double-items">
-<!--                                div запрещён внутри, можно span или ничего-->
-                                <div>
-                                    Categories
-                                </div>
+                                Categories
                                 <i class="fa-solid fa-chevron-up"></i>
                             </button>
                             <div class="categories-list">
@@ -58,17 +50,10 @@
                     </div>
                     <a href="#" class="bar-links__item bar-links__text-item bar-links__link ">Contact</a>
 
-<!--                    это интерактивный элемент, т.е. не div, скорее всего кнопка-->
-                    <div class="bar-links__item">
-                        <a href="#" class="bar-links__text-item bar-links__donate bar-links__link bar-links__double-items">
-                            <div class="bar-links__love-icon">
+                    <button class="bar-links__item bar-links__text-item bar-links__donate bar-links__link bar-links__double-items">
                                 <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div>
                                 Donate
-                            </div>
-                        </a>
-                    </div>
+                    </button>
                 </div>
             </nav>
         </div>
@@ -78,10 +63,9 @@
             <div class="short-news-of-the-day">
                 <img class="short-news-of-the-day__picture" src="images/motivational__picture.png" alt="short-news-of-the-day_picture">
                 <div class="short-news-of-the-day__header">
-<!--                    это h1, у тебя нет других заголовков важнее-->
-                    <h3 class="short-news-of-the-day__text">
+                    <h1 class="short-news-of-the-day__text">
                         How to rapidly test any experience!
-                    </h3>
+                    </h1>
                 </div>
                 <audio class="short-news-of-the-day__audio" controls src="/media/cc0-audio/t-rex-roar.mp3"> </audio>
                 <div>
@@ -101,26 +85,20 @@
             </div>
 
             <div class="news-dashboard">
-<!--                пагинация выводит по одной статье? мог хотя бы 5 добавить-->
                 <div class="news">
                     <div class="news__additional-info additional-info">
                         <div class="additional-info__new">
                             New
                         </div>
-                        <div class="additional-info__category">
-                            Business
-                        </div>
-<!--                        это делается через стили, не через семантическую разметку-->
-                        <div>|</div>
                         <div class="additional-info__data">
-                            Jan 18, 2021
+                            Business | Jan 18, 2021
                         </div>
                     </div>
                     <div class="news-dashboard__general-info news__general-info">
                         <a href="#" class="news__url">
-                            <h3 class="news__title">
+                            <h2 class="news__title">
                                 23 - Makemeup Podcast Theme
-                            </h3>
+                            </h2>
                         </a>
 
                         <div class="news__short-description">
@@ -130,33 +108,159 @@
                         <div class="news-dashboard__tags news__tags tags">
                             <div class="news-dashboard__spacer news__spacer spacer"></div>
                             <div class="tags__item">
-                                #HCI
+                                #hci
                             </div>
                             <div class="tags__item">
-                                #HCI
+                                #hci
                             </div>
                         </div>
                     </div>
 
-<!--                    не хватает блока .pagination, чтобы можно было переиспользовать, отношение к news разве что -->
-<!--                    с позиционированием должно быть связано-->
-                    <div class="news__pagination">
-                        <a href="#" class="news__page-number">
-                            1
-                        </a>
-                        <a href="#"  class="news__page-number">
-                            2
-                        </a>
-                        <a href="#"  class="news__page-number">
-                            3
+                </div>
+                <div class="news">
+                    <div class="news__additional-info additional-info">
+                        <div class="additional-info__new">
+                            New
+                        </div>
+                        <div class="additional-info__data">
+                            Business | Jan 18, 2021
+                        </div>
+                    </div>
+                    <div class="news-dashboard__general-info news__general-info">
+                        <a href="#" class="news__url">
+                            <h2 class="news__title">
+                                22 - Makemeup Podcast Theme
+                            </h2>
                         </a>
 
-<!--                        а какое действие ожидается при клике на многоточие? полагаю тогда не хватает последней страницы-->
-<!--                        после многоточия-->
-                        <a href="#"  class="news__page-number">
-                            ...
-                        </a>
+                        <div class="news__short-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
+                        </div>
+
+                        <div class="news-dashboard__tags news__tags tags">
+                            <div class="news-dashboard__spacer news__spacer spacer"></div>
+                            <div class="tags__item">
+                                #hci
+                            </div>
+                            <div class="tags__item">
+                                #hci
+                            </div>
+                        </div>
                     </div>
+
+                </div>
+                <div class="news">
+                    <div class="news__additional-info additional-info">
+                        <div class="additional-info__new">
+                            New
+                        </div>
+                        <div class="additional-info__data">
+                            Business | Jan 18, 2021
+                        </div>
+                    </div>
+                    <div class="news-dashboard__general-info news__general-info">
+                        <a href="#" class="news__url">
+                            <h2 class="news__title">
+                                21 - Makemeup Podcast Theme
+                            </h2>
+                        </a>
+
+                        <div class="news__short-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
+                        </div>
+
+                        <div class="news-dashboard__tags news__tags tags">
+                            <div class="news-dashboard__spacer news__spacer spacer"></div>
+                            <div class="tags__item">
+                                #hci
+                            </div>
+                            <div class="tags__item">
+                                #hci
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="news">
+                    <div class="news__additional-info additional-info">
+                        <div class="additional-info__new">
+                            New
+                        </div>
+                        <div class="additional-info__data">
+                            Business | Jan 18, 2021
+                        </div>
+                    </div>
+                    <div class="news-dashboard__general-info news__general-info">
+                        <a href="#" class="news__url">
+                            <h2 class="news__title">
+                                20 - Makemeup Podcast Theme
+                            </h2>
+                        </a>
+
+                        <div class="news__short-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
+                        </div>
+
+                        <div class="news-dashboard__tags news__tags tags">
+                            <div class="news-dashboard__spacer news__spacer spacer"></div>
+                            <div class="tags__item">
+                                #hci
+                            </div>
+                            <div class="tags__item">
+                                #hci
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="news">
+                    <div class="news__additional-info additional-info">
+                        <div class="additional-info__new">
+                            New
+                        </div>
+                        <div class="additional-info__data">
+                            Business | Jan 18, 2021
+                        </div>
+                    </div>
+                    <div class="news-dashboard__general-info news__general-info">
+                        <a href="#" class="news__url">
+                            <h2 class="news__title">
+                                19 - Makemeup Podcast Theme
+                            </h2>
+                        </a>
+
+                        <div class="news__short-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
+                        </div>
+
+                        <div class="news-dashboard__tags news__tags tags">
+                            <div class="news-dashboard__spacer news__spacer spacer"></div>
+                            <div class="tags__item">
+                                #hci
+                            </div>
+                            <div class="tags__item">
+                                #hci
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="news-dashboard__pagination pagination">
+                    <a href="#" class="pagination__page-number">
+                        1
+                    </a>
+                    <a href="#"  class="pagination__page-number">
+                        2
+                    </a>
+                    <a href="#"  class="pagination__page-number">
+                        3
+                    </a>
+                    <a href="#"  class="pagination__page-number">
+                        ...
+                    </a>
+                    <a href="#"  class="pagination__page-number">
+                        >
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,26 +1,30 @@
-@import "styles/_utils.scss"; // можно писать @import "styles/utils"
-@import "styles/_layout.scss";
-@import "styles/_header.scss";
-@import "styles/_nav.scss";
-@import "styles/_buttons.scss";
-@import "styles/_bar-links";
-@import "styles/_menu.scss";
-@import "styles/_short-news-of-the-day.scss";
-@import "styles/_wrapper.scss";
-@import "styles/_news.scss";
-@import "styles/_tags.scss";
-@import "styles/_footer.scss";
-@import "styles/_about-site.scss";
-@import "styles/_additional-info.scss";
-@import "styles/_news-dashboard.scss";
-@import "styles/_comments.scss";
-@import "styles/_reply.scss";
-@import "styles/_form.scss";
-@import "styles/_comment.scss";
-@import "styles/_create-new-news.scss";
-@import "styles/_social-media.scss";
-@import "styles/_categories-list.scss";
-
+@import "styles/utils";
+@import "styles/layout";
+@import "styles/header";
+@import "styles/nav";
+@import "styles/buttons";
+@import "styles/bar-links";
+@import "styles/menu";
+@import "styles/short-news-of-the-day";
+@import "styles/wrapper";
+@import "styles/news";
+@import "styles/tags";
+@import "styles/footer";
+@import "styles/about-site";
+@import "styles/additional-info";
+@import "styles/news-dashboard";
+@import "styles/comments";
+@import "styles/reply";
+@import "styles/form";
+@import "styles/comment";
+@import "styles/create-new-news";
+@import "styles/social-media";
+@import "styles/categories-list";
+@import "styles/pagination";
+@import "styles/popup";
+@import "styles/full-news";
+@import "styles/logo";
+@import "styles/user-avatar";
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
 }
@@ -33,4 +37,20 @@ h1, h2, h3, h4, h5, h6, p {
   --selection-text-color: #7247CA;
   --headers-text-color: rgba(0, 0, 0, 1);
   --text-color: rgba(85, 85, 85, 1);
+}
+
+.tags__item {
+  @include button-clear;
+}
+
+.bar-links__item{
+  @include button-clear;
+}
+
+.bar-links__categories-button {
+  @include button-clear;
+}
+
+.menu__hamburger {
+  @include button-clear;
 }

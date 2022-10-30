@@ -5,14 +5,3 @@
   padding: 0px;
   color: var(--text-color);
 }
-
-//оба элемента ниже находятся не в том файле, корректнее разместить button-clear миксин в _mixins.scss,
-//а эти элементы в соответствующих файлах, а то выглядят как потеряшки
-.bar-links__categories-button {
-  @include button-clear;
-}
-
-.menu__hamburger {
-  @include button-clear;
-
-}

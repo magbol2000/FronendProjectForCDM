@@ -1,5 +1,4 @@
 @import "_mixins.scss";
-@import "_fonts.scss";
 
 .form {
   display: flex;
@@ -13,18 +12,21 @@
   &__label {
     display: flex;
     flex-direction: column;
-    @include i-font-SSP-w-lg;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
   }
   &__label-checkbox {
-    @include i-font-SSP-w-lg;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
     accent-color: var(--primary-color);
   }
   &__field {
     background: var(--background-text-color);
-    border: 0px; // лучше border: none, это стандартнее
+    border: none;
   }
   &__button {
-    width: 90px; // это плохо, кнопка не может ограничиваться таким образом, т.к. контента может быть больше, корректнее через padding задать отступ слева справа, а то текста может быть явно больше чем сейчас по дизайну у тебя
     height: 34px;
     color: white;
     background: var(--selection-text-color);

@@ -1,20 +1,10 @@
-@import "_fonts.scss";
+@import "_mixins.scss";
 
 .menu {
   display: flex;
   align-items: center;
-
-  //это блок .logo, а не элемент, здесь нет ни одного свойства для элемента, всё для блока
-  &__logo {
-    @include i-font-Oswald-w-xs; // ну такое, ради одного логотипа подключать целый шрифт как то слишком, лучше картинку вырезать для лого, тем более тащить миксин из-за этого
-    margin-bottom: 0px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--text-color-headers);
-  }
 }
 
-//этот миксин не подключен для этого файла, странно что вообще собралось, влом парсить почему работает, но забавно
 @include desktop {
   .menu {
     &__hamburger {

@@ -1,14 +1,16 @@
-@import "_fonts.scss";
-
 .additional-info {
-  @include i-font-SSP-w-md;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
   display: flex;
   align-items: center;
   text-transform: capitalize;
   gap: 10px;
 
   &__new {
-    @include i-font-SSP-bw-xs;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 13px;
     color: var(--selection-text-color);
     background: var(--background-text-color);
     border-radius: 3px;

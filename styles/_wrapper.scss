@@ -2,8 +2,10 @@
 
 .wrapper {
   display: flex;
+  max-width: 670px;
+  margin: 0 auto;
+  flex: 1 1 auto;
   flex-direction: column;
-  align-items: center;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -18,7 +20,7 @@
 
 @include mobile {
   .wrapper {
-    gap: 64px;
+    gap: 30px;
     padding-top: 48px;
     padding-bottom: 48px;
   }

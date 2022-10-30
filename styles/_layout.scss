@@ -1,8 +1,11 @@
 @import "_mixins.scss";
-@import "_fonts.scss";
 
 .general-body {
-  @include i-font-SSP-bw-xl; //
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 13px;
   color: var(--text-color);
 }
 
@@ -16,11 +19,6 @@
     border-bottom: 2px solid var(--border-color);
   }
 
-  //задание флексов здесь лишнее, всё равно внутри самих блоков header, footer указываешь это ещё раз
-  &__header {
-    display: flex;
-  }
-
   &__footer {
     display: flex;
     position: relative;
@@ -30,14 +28,7 @@
 @include mobile {
   .layout {
     &__header {
-      flex-direction: column; // это неверно, скорее надо чтобы display: flex был только для desktop задан
-      padding-top: 24px;
-      padding-left: 16px;
-      padding-right: 16px;
-      padding-bottom: 24px;
-
-      //можно написать
-      //padding: 24px 16px;
+      padding: 24px 16px;
     }
   }
 }
@@ -45,10 +36,8 @@
 @include desktop {
   .layout {
     &__header {
-      padding-top: 39px;
-      padding-left: 150px;
-      padding-right: 150px;
-      padding-bottom: 39px;
+      display: flex;
+      padding: 39px 150px;
     }
   }
 }

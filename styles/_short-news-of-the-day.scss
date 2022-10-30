@@ -1,5 +1,5 @@
 @import "_mixins.scss";
-@import "_fonts.scss";
+
 .short-news-of-the-day {
   display: flex;
   flex-direction: column;
@@ -30,7 +30,9 @@
 
   &__listen-on-text {
     text-align: center;
-    @include i-font-SSP-bw-sm;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }

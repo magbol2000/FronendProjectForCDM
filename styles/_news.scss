@@ -1,11 +1,4 @@
 @import "_mixins.scss";
-@import "_fonts.scss";
-
-.full-news {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 
 .news {
   display: flex;
@@ -14,31 +7,21 @@
   gap: 14px;
 
   &__title {
-    @include i-font-SSP-bw-xl;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
     color: var(--primary-color);
   }
 
   &__short-description {
-    @include i-font-SSP-w-lg;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
   }
   &__general-info {
     display: flex;
     flex-direction: column;
     gap: 14px;
-  }
-
-  // это отдельный блок про пагинацию
-  &__pagination {
-    display: flex;
-    gap: 2px;
-  }
-
-  &__page-number {
-    @include i-font-SSP-w-md;
-    padding: 8px;
-    background: var(--background-text-color);
-    text-decoration: none;
-    color: var(--primary-color);
   }
 
   &__url {
@@ -47,7 +30,9 @@
   }
 
   &__full-text {
-    @include i-font-SSP-w-lg;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
   }
 }
 

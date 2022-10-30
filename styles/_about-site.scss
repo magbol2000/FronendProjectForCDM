@@ -1,5 +1,4 @@
 @import "_mixins.scss";
-@import "_fonts.scss";
 
 .about-site {
   display: flex;
@@ -13,7 +12,9 @@
   }
 
   &__created-by-text {
-    @include i-font-SSP-w-md;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
     text-transform: capitalize;
   }
   &__contacts-item {
