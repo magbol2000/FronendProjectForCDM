@@ -1,4 +1,4 @@
-@import "_mixins.scss";
+@import "mixins";
 
 .form {
   display: flex;
@@ -9,6 +9,7 @@
     max-width: 100%;
     height: 150px;
   }
+
   &__label {
     display: flex;
     flex-direction: column;
@@ -16,21 +17,24 @@
     font-size: 16px;
     line-height: 25px;
   }
+
   &__label-checkbox {
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
     accent-color: var(--primary-color);
   }
+
   &__field {
     background: var(--background-text-color);
     border: none;
   }
+
   &__button {
-    height: 34px;
+    align-items: center;
+    padding: 10px 30px;
     color: white;
     background: var(--selection-text-color);
-    outline: none;
     border-radius: 4px;
   }
 }

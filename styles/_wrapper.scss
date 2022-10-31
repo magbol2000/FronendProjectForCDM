@@ -1,4 +1,4 @@
-@import "_mixins.scss";
+@import "mixins";
 
 .wrapper {
   display: flex;
@@ -13,7 +13,7 @@
 @include desktop {
   .wrapper {
     padding-top: 100px;
-    gap: 100px;
+    gap: 70px;
     padding-bottom: 100px;
   }
 }

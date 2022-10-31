@@ -37,15 +37,11 @@
     text-transform: uppercase;
   }
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center; // это свойство здесь лишнее, для мобильной версии флексы не нужны, т.к. все задается построчно, т.е. display: block или display: grid
-                             // без этого свойства строчка contacts будет прижата к левому краю
+    text-align: center;
   }
 
   &__double-items {
     display: block;
-    gap: 8px;
   }
 }
 

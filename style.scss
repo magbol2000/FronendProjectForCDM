@@ -39,10 +39,6 @@ h1, h2, h3, h4, h5, h6, p {
   --text-color: rgba(85, 85, 85, 1);
 }
 
-.tags__item {
-  @include button-clear;
-}
-
 .bar-links__item{
   @include button-clear;
 }
