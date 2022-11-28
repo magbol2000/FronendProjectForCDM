@@ -19,7 +19,6 @@ export class NewsResolver implements Resolve<INews | boolean>{
   resolve (route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<INews> | Promise<boolean> {
     const id: number = +route.paramMap.get('id')!;
     this._globalStates.loading = true;
-
     return this._newsService.get(id).pipe(
       finalize(() => this._globalStates.loading = false),
       catchError((error) => {

@@ -11,7 +11,7 @@ export class NewsService {
   }
 
   get api() {
-    return `http://localhost:3000/news`;
+    return `http://localhost:3000/news/`;
   }
 
   public getAll ():Observable<INews[]> {

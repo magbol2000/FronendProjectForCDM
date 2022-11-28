@@ -1,5 +1,5 @@
 export interface INews {
-  id: string,
+  id: number,
   news_name: string,
   short_describtion: string,
   full_news: string,

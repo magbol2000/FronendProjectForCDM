@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {NewsService} from "../../services/news.service";
 import {Observable} from "rxjs";
 import {INews} from "../../models/news";
+import {FormBuilder} from "@angular/forms";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-news-details',
