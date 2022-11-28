@@ -1,0 +1,8 @@
+<div class="news-dashboard">
+  <h2 *ngIf="loading">Loading ...</h2>
+  <app-short-news
+    *ngFor="let new of news$ | async"
+    [new]="new"
+  ></app-short-news>
+  <app-pagination></app-pagination>
+</div>

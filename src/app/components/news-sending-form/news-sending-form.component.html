@@ -1,0 +1,44 @@
+<form class="form">
+  <label class="form__label">Name of the news*
+    <input class="form__input form__field" type="text">
+  </label>
+
+  <label class="form__label form__user-text">
+    Short-describtion*
+    <textarea class="form__textarea form__field"></textarea>
+  </label>
+
+  <label class="form__label">Category*
+    <select>
+      <option value="Business">Business</option>
+      <option value="Education">Education</option>
+      <option value="Markets">Markets</option>
+    </select>
+  </label>
+
+  <label class="form__label form__user-text">
+    Full-news*
+    <textarea class="form__textarea form__field"></textarea>
+  </label>
+
+  <label class="form__label">Load audio
+    <input type="file">
+  </label>
+
+  <label class="form__label">Load general img
+    <input type="file">
+  </label>
+
+  <app-tags></app-tags>
+
+  <label class="form__label-checkbox">
+    <input type="checkbox">
+    Is disable comments?
+  </label>
+
+  <div>
+    <button type="submit" class="form__button">
+      Send
+    </button>
+  </div>
+</form>

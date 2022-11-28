@@ -1,0 +1,7 @@
+@mixin button-clear {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0px;
+  color: var(--text-color);
+}

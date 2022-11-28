@@ -1,0 +1,20 @@
+@import "mixins";
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--border-color);
+  padding-top: 10px;
+  &__dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 78px;
+  }
+
+  &__header {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+

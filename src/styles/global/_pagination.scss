@@ -1,0 +1,14 @@
+.pagination {
+  display: flex;
+  gap: 2px;
+
+  &__page-number {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px;
+    background: var(--background-text-color);
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+}

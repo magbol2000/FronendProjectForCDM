@@ -1,0 +1,14 @@
+@import "mixins";
+
+.view-news {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+@include mobile {
+  .view-news {
+    gap: 32px;
+  }
+}
+

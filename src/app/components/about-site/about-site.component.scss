@@ -1,0 +1,27 @@
+.about-site {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 23px;
+  }
+
+  &__created-by-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: capitalize;
+  }
+
+  &__contacts-item {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    color: var(--primary-color)
+  }
+}

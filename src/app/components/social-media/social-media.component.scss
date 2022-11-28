@@ -1,0 +1,12 @@
+.social-media {
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+
+  &__item {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+}

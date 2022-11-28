@@ -1,0 +1,18 @@
+@import "mixins";
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    width: 93px;
+  }
+}
+
+@include desktop {
+  .menu {
+    &__hamburger {
+      display: none !important;
+    }
+  }
+}

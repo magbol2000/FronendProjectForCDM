@@ -1,0 +1,25 @@
+@import "mixins";
+@import "buttons";
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  width: 100%; // флекс сам по себе уже 100% ширины, стало быть лишнее, либо что-то родительский блок не так делает
+  &__item {
+    @include button-clear;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 16px;
+    background: var(--background-text-color);
+  }
+}
+
+
+
+
+
+
+// тут такая проблема возникает, так как мы тэг .news-dashboard__tags становится absolute, то есть становится без размера родительского блока и чтобы растянуть div мы используем wight 100%

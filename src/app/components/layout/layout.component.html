@@ -1,0 +1,18 @@
+<script src="../../app-routing.module.ts"></script>
+<div class="layout">
+  <header class="layout__header">
+    <app-menu></app-menu>
+    <div class="spacer"></div>
+    <div class="header__navbar">
+      <app-nav></app-nav>
+    </div>
+  </header>
+  <main class="layout__main">
+    <div class="layout__wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  <footer class="layout__footer">
+    <app-about-site></app-about-site>
+  </footer>
+</div>

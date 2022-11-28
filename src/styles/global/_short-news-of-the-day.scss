@@ -1,0 +1,56 @@
+@import "mixins";
+
+.short-news-of-the-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 39px;
+
+  &__picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__listen-on-text {
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+}
+
+@include mobile {
+  .short-news-of-the-day {
+    &__audio {
+      width: 288px;
+    }
+  }
+}
+
+@include desktop {
+  .short-news-of-the-day {
+    &__audio {
+      width: 700px;
+    }
+  }
+}

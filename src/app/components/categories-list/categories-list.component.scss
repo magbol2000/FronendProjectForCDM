@@ -1,0 +1,32 @@
+@import "mixins";
+
+.categories-list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  &__item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    color: var(--text-color)
+  }
+}
+
+@include mobile {
+  .categories-list {
+    align-items: center;
+  }
+}
+
+@include desktop {
+  .categories-list {
+    text-align: start;
+    width: 100px;
+    background: var(--container-bg-color);
+    border: 1px solid var(--border-color);
+    position: absolute;
+  }
+}

@@ -1,0 +1,15 @@
+@import "mixins";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+@include mobile {
+  .main {
+    gap: 32px;
+  }
+}
+
+
