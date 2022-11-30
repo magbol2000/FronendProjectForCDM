@@ -1,5 +1,5 @@
 <div class="view-news">
-  <app-full-news></app-full-news>
-  <app-reply></app-reply>
-  <app-comments></app-comments>
+  <app-full-news [new]="new"></app-full-news>
+  <app-reply *ngIf="!new.is_disable_comments"></app-reply>
+  <app-comments *ngIf="!new.is_disable_comments"></app-comments>
 </div>

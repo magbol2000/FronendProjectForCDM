@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder} from "@angular/forms";
 import {ActivatedRoute} from "@angular/router";
 import {INews} from "../../models/news";
@@ -9,15 +9,14 @@ import {INews} from "../../models/news";
   styleUrls: ['./full-news.component.scss']
 })
 export class FullNewsComponent implements OnInit {
-  new: INews;
+  @Input() new: INews;
 
   constructor(
-    private _activatedRoute: ActivatedRoute,
   ) {
   }
 
   ngOnInit() {
-     this.new = this._activatedRoute.snapshot.data['newsResolver'];
+
   }
 
 }

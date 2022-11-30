@@ -1,11 +1,18 @@
-<form class="form">
+<form  class="form" [formGroup]="form" (ngSubmit)="submit()">
   <label class="form__label">Name of the news*
-    <input class="form__input form__field" type="text">
+    <input
+      class="form__input form__field"
+      type="text"
+      formControlName="news_name"
+    />
   </label>
 
   <label class="form__label form__user-text">
     Short-describtion*
-    <textarea class="form__textarea form__field"></textarea>
+    <textarea
+      class="form__textarea form__field"
+      formControlName="short_describtion"
+    ></textarea>
   </label>
 
   <label class="form__label">Category*
@@ -18,27 +25,31 @@
 
   <label class="form__label form__user-text">
     Full-news*
-    <textarea class="form__textarea form__field"></textarea>
+    <textarea
+      class="form__textarea form__field"
+      formControlName="full_news"
+    ></textarea>
   </label>
 
   <label class="form__label">Load audio
-    <input type="file">
+    <input type="file"/>
   </label>
 
   <label class="form__label">Load general img
-    <input type="file">
+    <input type="file"/>
   </label>
 
   <app-tags></app-tags>
 
   <label class="form__label-checkbox">
-    <input type="checkbox">
+    <input type="checkbox"/>
     Is disable comments?
   </label>
 
   <div>
-    <button type="submit" class="form__button">
-      Send
-    </button>
+    <button
+      type="submit"
+      class="form__button"
+    >Send</button>
   </div>
 </form>

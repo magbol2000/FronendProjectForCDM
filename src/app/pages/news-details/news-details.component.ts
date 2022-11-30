@@ -13,13 +13,14 @@ import {ActivatedRoute} from "@angular/router";
 export class NewsDetailsComponent implements OnInit {
   news$: Observable<INews>;
   loading: boolean = false;
-
+  new: INews;
   constructor(
-    private newsService: NewsService
+    private newsService: NewsService,
+    private _activatedRoute: ActivatedRoute,
   ) {
   }
 
   ngOnInit() {
-
+    this.new = this._activatedRoute.snapshot.data['newsResolver'];
   }
 }

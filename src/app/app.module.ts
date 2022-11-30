@@ -26,6 +26,7 @@ import { NewsSendingFormComponent } from './components/news-sending-form/news-se
 import { CommentComponent } from './components/comment/comment.component';
 import { NewsDetailsComponent } from './pages/news-details/news-details.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

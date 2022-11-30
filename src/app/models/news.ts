@@ -10,5 +10,5 @@ export interface INews {
   tags: string[],
   // todo fill data
   data: string,
-  is_disable_comments: boolean
+  is_disable_comments?: boolean
 }
