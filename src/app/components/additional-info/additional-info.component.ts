@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import {INews} from "../../models/news";
 
 @Component({
   selector: 'app-additional-info',
@@ -6,6 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./additional-info.component.scss']
 })
 export class AdditionalInfoComponent {
-  @Input() category: string;
-  @Input() data: string;
+  @Input() new: INews;
 }

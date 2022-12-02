@@ -2,7 +2,7 @@
 
 .bar-links {
   display: flex;
-  gap: 39px;
+  gap: 30px;
 
   &__link {
     text-decoration: none;
@@ -48,7 +48,7 @@
 @include desktop {
   .bar-links {
     position: relative;
-    gap: 39px;
+    gap: 30px;
 
     &__popup {
       position: relative;

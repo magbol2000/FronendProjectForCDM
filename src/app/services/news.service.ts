@@ -26,8 +26,8 @@ export class NewsService {
     return this._http.post<INews>(`${this.api}`,news)
   }
 
-  public edit(news: INews): Observable<INews> {
-    return this._http.put<INews>(`${this.api}${news.id}`, news);
+  public edit(news: INews, id: number): Observable<INews> {
+    return this._http.put<INews>(`${this.api}${id}`, news);
   }
 
   public remove(id: number): Observable<unknown> {

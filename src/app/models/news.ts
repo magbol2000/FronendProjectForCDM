@@ -1,5 +1,7 @@
+import {Data} from "@angular/router";
+
 export interface INews {
-  id: number,
+  id?: number,
   news_name: string,
   short_describtion: string,
   full_news: string,

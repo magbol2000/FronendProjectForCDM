@@ -1,7 +1,6 @@
 <div class="news">
   <app-additional-info
-    [category]="new.category"
-    [data]="new.data"
+    [new]="new"
   ></app-additional-info>
   <div class="news__general-info">
     <div class="news__header">
@@ -14,6 +13,7 @@
         *ngIf="!isMobileResolution()"
         [tags]="new.tags"
       ></app-tags>
+
     </div>
     <div class="news__short-description">
       {{ new.short_describtion }}

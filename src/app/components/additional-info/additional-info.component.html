@@ -4,8 +4,10 @@
   <div class="additional-info__new">
     New
   </div>
-  <div class="additional-info__data">
+  <div class="additional-info__data spacer">
 <!-- todo prepare data-->
-    {{ category }} | {{ data }}
+    {{ new.category }} | {{ new.data | date:'mediumDate' }}
   </div>
+  <a [routerLink]="['/adding-news', new.id]"><i>#</i></a>
+  <a [routerLink]="['/deleting-news', new.id]"><i>#</i></a>
 </div>

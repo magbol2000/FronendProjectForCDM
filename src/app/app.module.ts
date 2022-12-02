@@ -27,6 +27,7 @@ import { CommentComponent } from './components/comment/comment.component';
 import { NewsDetailsComponent } from './pages/news-details/news-details.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
+import { DeletingNewsComponent } from './pages/deleting-news/deleting-news.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     NewsSendingFormComponent,
     CommentComponent,
     NewsDetailsComponent,
+    DeletingNewsComponent,
   ],
   imports: [
     BrowserModule,
