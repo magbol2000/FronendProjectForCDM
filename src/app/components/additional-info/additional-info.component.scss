@@ -21,6 +21,11 @@
 
   &__data {
     display: flex;
+  }
 
+  &__link {
+    padding: 5px;
+    color: black;
+    text-decoration: none; /* no underline */
   }
 }

@@ -1,4 +1,9 @@
 <div class="main">
-  <app-short-news-of-the-day></app-short-news-of-the-day>
-  <app-news-dashboard></app-news-dashboard>
+  <app-short-news-of-the-day
+    [new]="LastNew"
+    [isGeneralPage]=true
+  ></app-short-news-of-the-day>
+  <app-news-dashboard
+    (lastElem)=getLastNew($event)
+  ></app-news-dashboard>
 </div>

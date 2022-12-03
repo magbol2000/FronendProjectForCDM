@@ -52,6 +52,8 @@ export class NewsSendingFormComponent implements OnInit {
         full_news: this.NewsLastValue.full_news
       });
     }
+
+
   }
 
   public submit() {

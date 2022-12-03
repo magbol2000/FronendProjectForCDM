@@ -189,6 +189,34 @@
       "data": "Sat Dec 03 2022",
       "is_disable_comments": true,
       "id": 33
+    },
+    {
+      "news_name": "sgsfdg",
+      "short_describtion": "sfdgfsdgfsdg",
+      "full_news": "sfdgsfdgfsdg",
+      "category": "Market",
+      "audio_name": "Hi",
+      "img_name": "hi",
+      "tags": [
+        "hi"
+      ],
+      "data": "Sat Dec 03 2022",
+      "is_disable_comments": true,
+      "id": 34
+    },
+    {
+      "news_name": "fsdfhehfasfidjsoaifjodsjaofj",
+      "short_describtion": "dsafdsf",
+      "full_news": "asdfsadfsdafdsafdsafdsafdsafdsafsdafsdafsdaf",
+      "category": "Market",
+      "audio_name": "Hi",
+      "img_name": "hi",
+      "tags": [
+        "hi"
+      ],
+      "data": "Sun Dec 04 2022",
+      "is_disable_comments": true,
+      "id": 36
     }
   ]
 }

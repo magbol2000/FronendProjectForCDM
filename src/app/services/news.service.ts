@@ -1,12 +1,13 @@
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {Observable, delay} from "rxjs";
+import {Observable, delay, last} from "rxjs";
 import {INews} from "../models/news";
 
 @Injectable({
   providedIn:'root'
 })
 export class NewsService {
+
   constructor(private _http: HttpClient) {
   }
 
@@ -33,5 +34,4 @@ export class NewsService {
   public remove(id: number): Observable<unknown> {
     return this._http.delete(`${this.api}${id}`);
   }
-
 }
