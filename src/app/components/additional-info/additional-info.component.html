@@ -1,12 +1,12 @@
 <div class="additional-info">
-  <div *ngIf="isShortNew == true && checkIsNewsNew()" class="additional-info__new">
+  <div *ngIf="isItShortNews == true && checkIsNewsNew()" class="additional-info__new">
     New
   </div>
   <div class="additional-info__data spacer">
-    {{ new.category }} | {{ new.data | date:'mediumDate' }}
+    {{ newsItem.category }} | {{ newsItem.data | date:'mediumDate' }}
   </div>
-  <div *ngIf="isShortNew == true">
-    <a [routerLink]="['/adding-news', new.id]" class="additional-info__link"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>
-    <a [routerLink]="['/deleting-news', new.id]" class="additional-info__link"><i class="fa-solid fa-xmark"></i></a>
+  <div *ngIf="isItShortNews == true">
+    <a [routerLink]="['/adding-news', newsItem.id]" class="additional-info__link"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>
+    <a [routerLink]="['/deleting-news', newsItem.id]" class="additional-info__link"><i class="fa-solid fa-xmark"></i></a>
   </div>
 </div>

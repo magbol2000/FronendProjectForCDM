@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {INews} from "../../models/news";
+import {INewsItem} from "../../models/news";
 import {NewsService} from "../../services/news.service";
-import {catchError, first, Observable, tap, throwError} from "rxjs";
+import {catchError, tap, throwError} from "rxjs";
 import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
@@ -10,27 +10,28 @@ import {HttpErrorResponse} from "@angular/common/http";
   styleUrls: ['./news-dashboard.component.scss']
 })
 export class NewsDashboardComponent implements OnInit {
-  news: INews[];
-  newsReverse: INews[];
+  newsGroup: INewsItem[];
+  reversedNewsGroup: INewsItem[];
   loading: boolean = false;
-  lastNew: INews;
+  lastNewsItem: INewsItem;
+
   constructor(
-    private newsService: NewsService
+    private _newsService: NewsService
   ) {
   }
 
   ngOnInit (): void {
     this.loading=true;
-    this.newsService.getAll().pipe(
+    this._newsService.getAll().pipe(
       tap(()=>{this.loading=false}),
       catchError(this.errorHandler),
 
     ).subscribe(
       value => {
-        this.news = value;
-        this.newsReverse = this.news.reverse();
-        this.lastNew = this.newsReverse[0]
-        this.lastElem.emit({ New: this.lastNew });
+        this.newsGroup = value;
+        this.reversedNewsGroup = this.newsGroup.reverse();
+        this.lastNewsItem = this.reversedNewsGroup[0]
+        this.lastNewsItemFromOutput.emit({ NewsItem: this.lastNewsItem });
       }
     )
 
@@ -41,5 +42,5 @@ export class NewsDashboardComponent implements OnInit {
     return throwError(() => error.message)
   }
 
-  @Output() lastElem = new EventEmitter<{ New: INews }>();
+  @Output() lastNewsItemFromOutput = new EventEmitter<{ NewsItem: INewsItem }>();
 }

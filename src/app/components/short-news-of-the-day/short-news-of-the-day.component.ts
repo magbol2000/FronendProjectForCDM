@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {INews} from "../../models/news";
-import {lastValueFrom} from "rxjs";
+import {INewsItem} from "../../models/news";
 
 @Component({
   selector: 'app-short-news-of-the-day',
@@ -8,7 +7,7 @@ import {lastValueFrom} from "rxjs";
   styleUrls: ['./short-news-of-the-day.component.scss']
 })
 export class ShortNewsOfTheDayComponent {
-  lastNew: INews = {
+  lastNewsItem: INewsItem = {
     news_name: "loading",
     full_news: "loading",
     short_describtion: "loading",
@@ -21,18 +20,14 @@ export class ShortNewsOfTheDayComponent {
   }
 
   constructor() {
-
-  }
-
-  ngOnInit (): void {
-
   }
 
   @Input()
-  set new(lastNew: INews) {
-    if (lastNew != null) {
-      this.lastNew = lastNew
+  set setNewsItem(lastNewsItem: INewsItem) {
+    if (lastNewsItem != null) {
+      this.lastNewsItem = lastNewsItem
     }
   }
-  @Input() isGeneralPage:boolean
+
+  @Input() isItGeneralPage:boolean
 }

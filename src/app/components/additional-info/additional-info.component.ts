@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { INews } from "../../models/news";
+import { INewsItem } from "../../models/news";
 
 @Component({
   selector: 'app-additional-info',
@@ -10,9 +10,9 @@ export class AdditionalInfoComponent {
   currentData: Date = new Date();
 
   checkIsNewsNew():boolean {
-    return this.currentData.toDateString() == this.new.data
+    return this.currentData.toDateString() == this.newsItem.data
   }
 
-  @Input() isShortNew: boolean;
-  @Input() new: INews;
+  @Input() isItShortNews: boolean;
+  @Input() newsItem: INewsItem;
 }

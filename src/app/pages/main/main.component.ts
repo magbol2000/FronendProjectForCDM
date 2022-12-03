@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {INews} from "../../models/news";
-import {LAST_MEDIA} from "@angular/cdk/keycodes";
+import {INewsItem} from "../../models/news";
 
 @Component({
   selector: 'app-main',
@@ -8,10 +7,10 @@ import {LAST_MEDIA} from "@angular/cdk/keycodes";
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-  LastNew: INews
+  lastNewsItem: INewsItem
 
-  getLastNew(eventData: { New: INews }) {
-    this.LastNew = eventData.New
-    console.log(this.LastNew)
+  getLastNewItem(eventData: { NewsItem: INewsItem }) {
+    this.lastNewsItem = eventData.NewsItem
+    console.log(this.lastNewsItem)
   }
 }

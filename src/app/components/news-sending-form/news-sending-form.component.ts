@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {INews} from "../../models/news";
+import {INewsItem} from "../../models/news";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NewsService} from "../../services/news.service";
@@ -20,9 +20,9 @@ interface LoginForm {
 })
 export class NewsSendingFormComponent implements OnInit {
   public form!: FormGroup<LoginForm>;
-  private isFormEditingValue: boolean
-  private News: INews;
-  private NewsLastValue: INews;
+  private isFormEditingValueNow: boolean
+  private currentNewsItem: INewsItem;
+  private previousNewsValue: INewsItem;
   private currentDate: Date = new Date();
 
   constructor(
@@ -34,7 +34,7 @@ export class NewsSendingFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isFormEditingValue = this._activatedRoute.snapshot.data['newsResolver'] != null
+    this.isFormEditingValueNow = this._activatedRoute.snapshot.data['newsResolver'] != null
 
 
     this.form = this._fb.nonNullable.group({
@@ -43,13 +43,13 @@ export class NewsSendingFormComponent implements OnInit {
       full_news: ['', Validators.required]
     })
 
-    if (this.isFormEditingValue) {
-      this.NewsLastValue = this._activatedRoute.snapshot.data['newsResolver'];
+    if (this.isFormEditingValueNow) {
+      this.previousNewsValue = this._activatedRoute.snapshot.data['newsResolver'];
 
       this.form.patchValue({
-        news_name: this.NewsLastValue.news_name,
-        short_describtion: this.NewsLastValue.short_describtion,
-        full_news: this.NewsLastValue.full_news
+        news_name: this.previousNewsValue.news_name,
+        short_describtion: this.previousNewsValue.short_describtion,
+        full_news: this.previousNewsValue.full_news
       });
     }
 
@@ -59,7 +59,7 @@ export class NewsSendingFormComponent implements OnInit {
   public submit() {
     const body = this.form.getRawValue(); // add type
 
-    this.News = {
+    this.currentNewsItem = {
       news_name: body.news_name,
       short_describtion: body.short_describtion,
       full_news: body.full_news,
@@ -71,13 +71,12 @@ export class NewsSendingFormComponent implements OnInit {
       is_disable_comments: true
     }
 
-    if (this.isFormEditingValue) {
-      console.log(this.NewsLastValue.id!)
-      this._newsService.edit(this.News, this.NewsLastValue.id!).subscribe(
+    if (this.isFormEditingValueNow) {
+      this._newsService.edit(this.currentNewsItem, this.previousNewsValue.id!).subscribe(
         () => this._router.navigate(['/'])
       )
     }else {
-      this._newsService.create(this.News).subscribe(
+      this._newsService.create(this.currentNewsItem).subscribe(
         () => this._router.navigate(['/'])
       )
     }

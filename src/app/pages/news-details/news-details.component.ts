@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NewsService} from "../../services/news.service";
 import {Observable} from "rxjs";
-import {INews} from "../../models/news";
+import {INewsItem} from "../../models/news";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -11,7 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class NewsDetailsComponent implements OnInit {
   loading: boolean = false;
-  new: INews;
+  newsItem: INewsItem;
   constructor(
     private newsService: NewsService,
     private _activatedRoute: ActivatedRoute,
@@ -19,6 +19,6 @@ export class NewsDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.new = this._activatedRoute.snapshot.data['newsResolver'];
+    this.newsItem = this._activatedRoute.snapshot.data['newsResolver'];
   }
 }

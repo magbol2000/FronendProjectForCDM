@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { INews } from "../../models/news";
+import { INewsItem } from "../../models/news";
 import { fromEvent } from 'rxjs';
 
 @Component({
@@ -13,11 +13,11 @@ export class ShortNewsComponent implements OnInit  {
 
   ngOnInit() {
     fromEvent(window, 'resize').subscribe(
-      ()=>this.isMobileResolution()
+      ()=>this.checkIsItMobileResolution
     );
   }
 
-  isMobileResolution() :boolean {
+  checkIsItMobileResolution() :boolean {
     if (window.innerWidth < 768) {
       return  true;
     } else {
@@ -25,5 +25,5 @@ export class ShortNewsComponent implements OnInit  {
     }
   }
 
-  @Input() new: INews
+  @Input() currentNewsItem: INewsItem
 }

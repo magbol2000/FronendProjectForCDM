@@ -1,16 +1,16 @@
 <div class="news">
   <div class="news__general-info">
     <div class="news__short-description">
-      {{ new.short_describtion }}
+      {{ newsItem.short_describtion }}
     </div>
     <h1 class="news__title">
-      {{ new.news_name }}
+      {{ newsItem.news_name }}
     </h1>
     <div class="news__full-text">
-      {{ new.full_news }}
+      {{ newsItem.full_news }}
     </div>
     <app-tags
-      [tags]="new.tags"
+      [tags]="newsItem.tags"
     ></app-tags>
   </div>
 </div>

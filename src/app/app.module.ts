@@ -25,7 +25,7 @@ import { CommentSendingFormComponent } from './components/comment-sending-form/c
 import { NewsSendingFormComponent } from './components/news-sending-form/news-sending-form.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { NewsDetailsComponent } from './pages/news-details/news-details.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import { DeletingNewsComponent } from './pages/deleting-news/deleting-news.component';
 

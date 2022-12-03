@@ -1,27 +1,27 @@
 <div class="news">
   <app-additional-info
-    [new]="new"
-    [isShortNew]=true
+    [newsItem]="currentNewsItem"
+    [isItShortNews]=true
   ></app-additional-info>
   <div class="news__general-info">
     <div class="news__header">
-      <a [routerLink]="['/news-details', new.id]" class="news__url spacer">
+      <a [routerLink]="['/news-details', currentNewsItem.id]" class="news__url spacer">
         <h2 class="news__title">
-          {{ new.news_name }}
+          {{ currentNewsItem.news_name }}
         </h2>
       </a>
       <app-tags
-        *ngIf="!isMobileResolution()"
-        [tags]="new.tags"
+        *ngIf="!checkIsItMobileResolution()"
+        [tags]="currentNewsItem.tags"
       ></app-tags>
 
     </div>
     <div class="news__short-description">
-      {{ new.short_describtion }}
+      {{ currentNewsItem.short_describtion }}
     </div>
     <app-tags
-      *ngIf="isMobileResolution()"
-      [tags]="new.tags"
+      *ngIf="checkIsItMobileResolution()"
+      [tags]="currentNewsItem.tags"
     ></app-tags>
   </div>
 </div>

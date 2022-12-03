@@ -2,8 +2,8 @@
   <h2 *ngIf="loading">Loading ...</h2>
 
   <app-short-news
-    *ngFor="let new of newsReverse"
-    [new]="new"
+    *ngFor="let newsItem of reversedNewsGroup"
+    [currentNewsItem]="newsItem"
   ></app-short-news>
 
   <app-pagination></app-pagination>

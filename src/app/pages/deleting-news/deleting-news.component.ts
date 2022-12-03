@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterModule} from "@angular/router";
-import {INews} from "../../models/news";
+import {INewsItem} from "../../models/news";
 import {NewsService} from "../../services/news.service";
 
 @Component({
@@ -10,7 +10,7 @@ import {NewsService} from "../../services/news.service";
 })
 
 export class DeletingNewsComponent implements OnInit {
-  News: INews;
+  NewsItem: INewsItem;
 
   constructor(
     private _activatedRoute: ActivatedRoute,
@@ -20,8 +20,8 @@ export class DeletingNewsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.News = this._activatedRoute.snapshot.data['newsResolver'];
-    this._newsService.remove(this.News.id!).subscribe(
+    this.NewsItem = this._activatedRoute.snapshot.data['newsResolver'];
+    this._newsService.remove(this.NewsItem.id!).subscribe(
       () => this._router.navigate(['/'])
     )
   }

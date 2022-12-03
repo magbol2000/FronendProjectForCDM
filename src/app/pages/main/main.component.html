@@ -1,9 +1,9 @@
 <div class="main">
   <app-short-news-of-the-day
-    [new]="LastNew"
-    [isGeneralPage]=true
+    [setNewsItem]="lastNewsItem"
+    [isItGeneralPage]=true
   ></app-short-news-of-the-day>
   <app-news-dashboard
-    (lastElem)=getLastNew($event)
+    (lastNewsItemFromOutput)=getLastNewItem($event)
   ></app-news-dashboard>
 </div>
