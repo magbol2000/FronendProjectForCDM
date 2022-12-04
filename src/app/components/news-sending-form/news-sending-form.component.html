@@ -1,9 +1,9 @@
-<form  class="form" [formGroup]="form" (ngSubmit)="submit()">
+<form (ngSubmit)="submit()" [formGroup]="form" class="form">
   <label class="form__label">Name of the news*
     <input
       class="form__input form__field"
-      type="text"
       formControlName="news_name"
+      type="text"
     />
   </label>
 
@@ -48,8 +48,9 @@
 
   <div>
     <button
-      type="submit"
       class="form__button"
-    >Send</button>
+      type="submit"
+    >Send
+    </button>
   </div>
 </form>

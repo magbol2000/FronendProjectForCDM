@@ -1,11 +1,11 @@
 <div class="news">
   <app-additional-info
-    [newsItem]="currentNewsItem"
     [isItShortNews]=true
+    [newsItem]="currentNewsItem"
   ></app-additional-info>
   <div class="news__general-info">
     <div class="news__header">
-      <a [routerLink]="['/news-details', currentNewsItem.id]" class="news__url spacer">
+      <a [routerLink]="['/details', currentNewsItem.id]" class="news__url spacer">
         <h2 class="news__title">
           {{ currentNewsItem.news_name }}
         </h2>

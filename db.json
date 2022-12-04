@@ -1,4 +1,18 @@
 {
+  "category": [
+    {
+      "id": "1",
+      "category_name": "Market"
+    },
+    {
+      "id": "2",
+      "category_name": "Education"
+    },
+    {
+      "id": "3",
+      "category_name": "Business"
+    }
+  ],
   "news": [
     {
       "news_name": "Herzog LLC123",
@@ -217,6 +231,34 @@
       "data": "Sun Dec 04 2022",
       "is_disable_comments": true,
       "id": 37
+    },
+    {
+      "news_name": "sadfsd",
+      "short_describtion": "a",
+      "full_news": "fdsaf",
+      "category": "Market",
+      "audio_name": "Hi",
+      "img_name": "hi",
+      "tags": [
+        "hi"
+      ],
+      "data": "Sun Dec 04 2022",
+      "is_disable_comments": true,
+      "id": 38
+    },
+    {
+      "news_name": "fsadfsadf",
+      "short_describtion": "asfsdaf",
+      "full_news": "asdfsadf",
+      "category": "Market",
+      "audio_name": "Hi",
+      "img_name": "hi",
+      "tags": [
+        "hi"
+      ],
+      "data": "Sun Dec 04 2022",
+      "is_disable_comments": true,
+      "id": 39
     }
   ]
 }

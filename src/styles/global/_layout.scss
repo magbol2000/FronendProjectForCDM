@@ -13,6 +13,7 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
   &__main {
     flex: 1 1 auto;
     border-top: 2px solid var(--border-color);

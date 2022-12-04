@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CommentSendingFormComponent } from './comment-sending-form.component';
+import {CommentSendingFormComponent} from './comment-sending-form.component';
 
 describe('CommentSendingFormComponent', () => {
   let component: CommentSendingFormComponent;
@@ -8,9 +8,9 @@ describe('CommentSendingFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommentSendingFormComponent ]
+      declarations: [CommentSendingFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(CommentSendingFormComponent);
     component = fixture.componentInstance;

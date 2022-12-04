@@ -18,13 +18,13 @@ h1, h2, h3, h4, h5, h6, p {
   --primary-color: #222222;
   --container-bg-color: #FFFFFF;
   --border-color: #EAEAEE;
-  --background-text-color:  #F5F5F7;
+  --background-text-color: #F5F5F7;
   --selection-text-color: #7247CA;
   --headers-text-color: rgba(0, 0, 0, 1);
   --text-color: rgba(85, 85, 85, 1);
 }
 
-.bar-links__item{
+.bar-links__item {
   @include button-clear;
 }
 
@@ -38,4 +38,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .tags__item {
   @include button-clear;
+}
+
+.notify__button {
+  @include button-clear
 }

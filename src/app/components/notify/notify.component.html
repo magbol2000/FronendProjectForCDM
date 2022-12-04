@@ -1,1 +1,10 @@
-<p>notify works!</p>
+<div
+  *ngIf="_errorService.error$ | async as error"
+  [ngClass]="{'notify__itIsNotTop' : !isHeaderInViewport}"
+  class="notify"
+>
+  <span class="notify__info spacer">{{ error }}</span>
+  <button (click)="onButton()" class="notify__button">
+    <i class="notify__close fa-solid fa-xmark"></i>
+  </button>
+</div>

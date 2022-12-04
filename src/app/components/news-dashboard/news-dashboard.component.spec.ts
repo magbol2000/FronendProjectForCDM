@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NewsDashboardComponent } from './news-dashboard.component';
+import {NewsDashboardComponent} from './news-dashboard.component';
 
 describe('NewsDashboardComponent', () => {
   let component: NewsDashboardComponent;
@@ -8,9 +8,9 @@ describe('NewsDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewsDashboardComponent ]
+      declarations: [NewsDashboardComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NewsDashboardComponent);
     component = fixture.componentInstance;

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {INewsItem} from "../../models/news";
 
 @Component({
@@ -9,8 +9,7 @@ import {INewsItem} from "../../models/news";
 export class FullNewsComponent {
   @Input() newsItem: INewsItem;
 
-  constructor(
-  ) {
+  constructor() {
   }
 
 }

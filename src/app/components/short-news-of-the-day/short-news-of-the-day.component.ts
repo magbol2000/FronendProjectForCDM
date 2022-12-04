@@ -18,6 +18,7 @@ export class ShortNewsOfTheDayComponent {
     data: "",
     is_disable_comments: false
   }
+  @Input() isItGeneralPage: boolean
 
   constructor() {
   }
@@ -28,6 +29,4 @@ export class ShortNewsOfTheDayComponent {
       this.lastNewsItem = lastNewsItem
     }
   }
-
-  @Input() isItGeneralPage:boolean
 }

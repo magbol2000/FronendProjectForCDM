@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NewsSendingFormComponent } from './news-sending-form.component';
+import {NewsSendingFormComponent} from './news-sending-form.component';
 
 describe('NewsSendingFormComponent', () => {
   let component: NewsSendingFormComponent;
@@ -8,9 +8,9 @@ describe('NewsSendingFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewsSendingFormComponent ]
+      declarations: [NewsSendingFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NewsSendingFormComponent);
     component = fixture.componentInstance;

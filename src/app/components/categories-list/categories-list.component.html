@@ -1,13 +1,10 @@
-<!-- todo search via categories -->
 <!--  todo hidden on mobile-->
 <div class="categories-list">
-  <a href="#" class="categories-list__item">
-    Business
-  </a>
-  <a href="#" class="categories-list__item">
-    Education
-  </a>
-  <a href="#" class="categories-list__item">
-    Markets
+  <a
+    *ngFor="let category of categories"
+    [routerLink]="['/search',category.id]"
+    class="categories-list__item"
+  >
+    {{category.category_name}}
   </a>
 </div>

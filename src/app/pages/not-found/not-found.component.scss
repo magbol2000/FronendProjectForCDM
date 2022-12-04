@@ -1,0 +1,28 @@
+.not-found {
+  text-align: center;
+  color: var(--primary-color);
+
+  &__warning-title {
+    font-weight: 600;
+    font-size: 144px;
+    line-height: 180px;
+  }
+
+  &__describe {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__more-details {
+    color: var(--text-color);
+  }
+
+  &__button {
+    padding: 10px 30px;
+    color: white;
+    background: var(--selection-text-color);
+    border-radius: 4px;
+  }
+}

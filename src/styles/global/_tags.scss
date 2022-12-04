@@ -1,5 +1,6 @@
 @import "mixins";
 @import "buttons";
+
 .tags {
   display: flex;
   flex-direction: row;
@@ -16,10 +17,6 @@
     background: var(--background-text-color);
   }
 }
-
-
-
-
 
 
 // тут такая проблема возникает, так как мы тэг .news-dashboard__tags становится absolute, то есть становится без размера родительского блока и чтобы растянуть div мы используем wight 100%

@@ -2,7 +2,7 @@
   <h2 *ngIf="loading">Loading ...</h2>
 
   <app-short-news
-    *ngFor="let newsItem of reversedNewsGroup"
+    *ngFor="let newsItem of reversedNewsGroup | filterCategories: searchQuery"
     [currentNewsItem]="newsItem"
   ></app-short-news>
 

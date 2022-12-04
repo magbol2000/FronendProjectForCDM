@@ -1,291 +1,299 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Document</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Serif+Pro:wght@400;600&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script src="https://kit.fontawesome.com/f6fec4e7cd.js" crossorigin="anonymous"></script>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        referrerpolicy="no-referrer" rel="stylesheet"/>
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/f6fec4e7cd.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body class="general-body">
 <div class="layout">
-    <header class="layout__header">
-        <div class="menu">
-            <img class="menu__logo logo" src="images/logo.png" alt="logo">
-            <div class="spacer"></div>
-            <button class="menu__hamburger">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-        <div class="spacer"></div>
-        <div class="header__navbar">
-            <nav class="nav">
-                <div class="nav__bar-links bar-links">
-                    <div class="bar-links__more-links bar-links__item">
-                        <div class="popup">
-                            <button class="bar-links__categories-button bar-links__text-item bar-links__double-items">
-                                Categories
-                                <i class="fa-solid fa-chevron-up"></i>
-                            </button>
-                            <div class="categories-list">
-                                <a href="#" class="categories-list__item">
-                                    Business
-                                </a>
-                                <a href="#" class="categories-list__item">
-                                    Education
-                                </a>
-                                <a href="#" class="categories-list__item">
-                                    Markets
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="bar-links__item bar-links__text-item bar-links__link ">Contact</a>
-
-                    <button class="bar-links__item bar-links__text-item bar-links__donate bar-links__link bar-links__double-items">
-                                <i class="fa-regular fa-heart"></i>
-                                Donate
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main class="layout__main">
-        <div class="wrapper">
-            <div class="short-news-of-the-day">
-                <img class="short-news-of-the-day__picture" src="images/motivational__picture.png" alt="short-news-of-the-day_picture">
-                <div class="short-news-of-the-day__header">
-                    <h1 class="short-news-of-the-day__text">
-                        How to rapidly test any experience!
-                    </h1>
-                </div>
-                <audio class="short-news-of-the-day__audio" controls src="/media/cc0-audio/t-rex-roar.mp3"> </audio>
-                <div>
-                    <h3 class="short-news-of-the-day__listen-on-text">Listen on</h3>
-                    <div class="short-news-of-the-day__social-media social-media">
-                        <a href="#" class="spotify-icon social-media__item">
-                            <i class="fa-brands fa-spotify"></i>
-                        </a>
-                        <a href="#" class="sountcloud-icon social-media__item">
-                            <i class="fa-brands fa-soundcloud"></i>
-                        </a>
-                        <a href="#"  class="applemusic-icon social-media__item">
-                            <i class="fa-brands fa-apple"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-dashboard">
-                <div class="news">
-                    <div class="news__additional-info additional-info">
-                        <div class="additional-info__new">
-                            New
-                        </div>
-                        <div class="additional-info__data">
-                            Business | Jan 18, 2021
-                        </div>
-                    </div>
-                    <div class="news-dashboard__general-info news__general-info">
-                        <a href="#" class="news__url">
-                            <h2 class="news__title">
-                                23 - Makemeup Podcast Theme
-                            </h2>
-                        </a>
-
-                        <div class="news__short-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
-                        </div>
-
-                        <div class="news-dashboard__tags news__tags tags">
-                            <div class="news-dashboard__spacer news__spacer spacer"></div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="news">
-                    <div class="news__additional-info additional-info">
-                        <div class="additional-info__new">
-                            New
-                        </div>
-                        <div class="additional-info__data">
-                            Business | Jan 18, 2021
-                        </div>
-                    </div>
-                    <div class="news-dashboard__general-info news__general-info">
-                        <a href="#" class="news__url">
-                            <h2 class="news__title">
-                                22 - Makemeup Podcast Theme
-                            </h2>
-                        </a>
-
-                        <div class="news__short-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
-                        </div>
-
-                        <div class="news-dashboard__tags news__tags tags">
-                            <div class="news-dashboard__spacer news__spacer spacer"></div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="news">
-                    <div class="news__additional-info additional-info">
-                        <div class="additional-info__new">
-                            New
-                        </div>
-                        <div class="additional-info__data">
-                            Business | Jan 18, 2021
-                        </div>
-                    </div>
-                    <div class="news-dashboard__general-info news__general-info">
-                        <a href="#" class="news__url">
-                            <h2 class="news__title">
-                                21 - Makemeup Podcast Theme
-                            </h2>
-                        </a>
-
-                        <div class="news__short-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
-                        </div>
-
-                        <div class="news-dashboard__tags news__tags tags">
-                            <div class="news-dashboard__spacer news__spacer spacer"></div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="news">
-                    <div class="news__additional-info additional-info">
-                        <div class="additional-info__new">
-                            New
-                        </div>
-                        <div class="additional-info__data">
-                            Business | Jan 18, 2021
-                        </div>
-                    </div>
-                    <div class="news-dashboard__general-info news__general-info">
-                        <a href="#" class="news__url">
-                            <h2 class="news__title">
-                                20 - Makemeup Podcast Theme
-                            </h2>
-                        </a>
-
-                        <div class="news__short-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
-                        </div>
-
-                        <div class="news-dashboard__tags news__tags tags">
-                            <div class="news-dashboard__spacer news__spacer spacer"></div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="news">
-                    <div class="news__additional-info additional-info">
-                        <div class="additional-info__new">
-                            New
-                        </div>
-                        <div class="additional-info__data">
-                            Business | Jan 18, 2021
-                        </div>
-                    </div>
-                    <div class="news-dashboard__general-info news__general-info">
-                        <a href="#" class="news__url">
-                            <h2 class="news__title">
-                                19 - Makemeup Podcast Theme
-                            </h2>
-                        </a>
-
-                        <div class="news__short-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
-                        </div>
-
-                        <div class="news-dashboard__tags news__tags tags">
-                            <div class="news-dashboard__spacer news__spacer spacer"></div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                            <div class="tags__item">
-                                #hci
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="news-dashboard__pagination pagination">
-                    <a href="#" class="pagination__page-number">
-                        1
-                    </a>
-                    <a href="#"  class="pagination__page-number">
-                        2
-                    </a>
-                    <a href="#"  class="pagination__page-number">
-                        3
-                    </a>
-                    <a href="#"  class="pagination__page-number">
-                        ...
-                    </a>
-                    <a href="#"  class="pagination__page-number">
-                        >
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="layout__footer footer">
-        <div class="about-site">
-            <div class="about-site__created-by-text">
-                Created by VitaThemes and Vasin Yuriy | Privacy policy
-            </div>
-            <div class="about-site__contacts">
-                <a href="#"  class="about-site__contacts-item">
-                    <i class="fa-brands fa-facebook"></i>
+  <header class="layout__header">
+    <div class="menu">
+      <img alt="logo" class="menu__logo logo" src="images/logo.png">
+      <div class="spacer"></div>
+      <button class="menu__hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <div class="spacer"></div>
+    <div class="header__navbar">
+      <nav class="nav">
+        <div class="nav__bar-links bar-links">
+          <div class="bar-links__more-links bar-links__item">
+            <div class="popup">
+              <button class="bar-links__categories-button bar-links__text-item bar-links__double-items">
+                Categories
+                <i class="fa-solid fa-chevron-up"></i>
+              </button>
+              <div class="categories-list">
+                <a class="categories-list__item" href="#">
+                  Business
                 </a>
-                <a href="#"  class="about-site__contacts-item">
-                    <i class="fa-brands fa-github"></i>
+                <a class="categories-list__item" href="#">
+                  Education
                 </a>
-                <a href="#"  class="about-site__contacts-item">
-                    <i class="fa-brands fa-twitter"></i>
+                <a class="categories-list__item" href="#">
+                  Markets
                 </a>
+              </div>
             </div>
+          </div>
+          <a class="bar-links__item bar-links__text-item bar-links__link " href="#">Contact</a>
+
+          <button
+            class="bar-links__item bar-links__text-item bar-links__donate bar-links__link bar-links__double-items">
+            <i class="fa-regular fa-heart"></i>
+            Donate
+          </button>
         </div>
-    </footer>
+      </nav>
+    </div>
+  </header>
+  <main class="layout__main">
+    <div class="wrapper">
+      <div class="short-news-of-the-day">
+        <img alt="short-news-of-the-day_picture" class="short-news-of-the-day__picture"
+             src="images/motivational__picture.png">
+        <div class="short-news-of-the-day__header">
+          <h1 class="short-news-of-the-day__text">
+            How to rapidly test any experience!
+          </h1>
+        </div>
+        <audio class="short-news-of-the-day__audio" controls src="/media/cc0-audio/t-rex-roar.mp3"></audio>
+        <div>
+          <h3 class="short-news-of-the-day__listen-on-text">Listen on</h3>
+          <div class="short-news-of-the-day__social-media social-media">
+            <a class="spotify-icon social-media__item" href="#">
+              <i class="fa-brands fa-spotify"></i>
+            </a>
+            <a class="sountcloud-icon social-media__item" href="#">
+              <i class="fa-brands fa-soundcloud"></i>
+            </a>
+            <a class="applemusic-icon social-media__item" href="#">
+              <i class="fa-brands fa-apple"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-dashboard">
+        <div class="news">
+          <div class="news__additional-info additional-info">
+            <div class="additional-info__new">
+              New
+            </div>
+            <div class="additional-info__data">
+              Business | Jan 18, 2021
+            </div>
+          </div>
+          <div class="news-dashboard__general-info news__general-info">
+            <a class="news__url" href="#">
+              <h2 class="news__title">
+                23 - Makemeup Podcast Theme
+              </h2>
+            </a>
+
+            <div class="news__short-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing
+              elit. Sed at arcu dui. Aenean placerat mauris nisl...
+            </div>
+
+            <div class="news-dashboard__tags news__tags tags">
+              <div class="news-dashboard__spacer news__spacer spacer"></div>
+              <div class="tags__item">
+                #hci
+              </div>
+              <div class="tags__item">
+                #hci
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="news">
+          <div class="news__additional-info additional-info">
+            <div class="additional-info__new">
+              New
+            </div>
+            <div class="additional-info__data">
+              Business | Jan 18, 2021
+            </div>
+          </div>
+          <div class="news-dashboard__general-info news__general-info">
+            <a class="news__url" href="#">
+              <h2 class="news__title">
+                22 - Makemeup Podcast Theme
+              </h2>
+            </a>
+
+            <div class="news__short-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing
+              elit. Sed at arcu dui. Aenean placerat mauris nisl...
+            </div>
+
+            <div class="news-dashboard__tags news__tags tags">
+              <div class="news-dashboard__spacer news__spacer spacer"></div>
+              <div class="tags__item">
+                #hci
+              </div>
+              <div class="tags__item">
+                #hci
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="news">
+          <div class="news__additional-info additional-info">
+            <div class="additional-info__new">
+              New
+            </div>
+            <div class="additional-info__data">
+              Business | Jan 18, 2021
+            </div>
+          </div>
+          <div class="news-dashboard__general-info news__general-info">
+            <a class="news__url" href="#">
+              <h2 class="news__title">
+                21 - Makemeup Podcast Theme
+              </h2>
+            </a>
+
+            <div class="news__short-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing
+              elit. Sed at arcu dui. Aenean placerat mauris nisl...
+            </div>
+
+            <div class="news-dashboard__tags news__tags tags">
+              <div class="news-dashboard__spacer news__spacer spacer"></div>
+              <div class="tags__item">
+                #hci
+              </div>
+              <div class="tags__item">
+                #hci
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="news">
+          <div class="news__additional-info additional-info">
+            <div class="additional-info__new">
+              New
+            </div>
+            <div class="additional-info__data">
+              Business | Jan 18, 2021
+            </div>
+          </div>
+          <div class="news-dashboard__general-info news__general-info">
+            <a class="news__url" href="#">
+              <h2 class="news__title">
+                20 - Makemeup Podcast Theme
+              </h2>
+            </a>
+
+            <div class="news__short-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing
+              elit. Sed at arcu dui. Aenean placerat mauris nisl...
+            </div>
+
+            <div class="news-dashboard__tags news__tags tags">
+              <div class="news-dashboard__spacer news__spacer spacer"></div>
+              <div class="tags__item">
+                #hci
+              </div>
+              <div class="tags__item">
+                #hci
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="news">
+          <div class="news__additional-info additional-info">
+            <div class="additional-info__new">
+              New
+            </div>
+            <div class="additional-info__data">
+              Business | Jan 18, 2021
+            </div>
+          </div>
+          <div class="news-dashboard__general-info news__general-info">
+            <a class="news__url" href="#">
+              <h2 class="news__title">
+                19 - Makemeup Podcast Theme
+              </h2>
+            </a>
+
+            <div class="news__short-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing
+              elit. Sed at arcu dui. Aenean placerat mauris nisl...
+            </div>
+
+            <div class="news-dashboard__tags news__tags tags">
+              <div class="news-dashboard__spacer news__spacer spacer"></div>
+              <div class="tags__item">
+                #hci
+              </div>
+              <div class="tags__item">
+                #hci
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="news-dashboard__pagination pagination">
+          <a class="pagination__page-number" href="#">
+            1
+          </a>
+          <a class="pagination__page-number" href="#">
+            2
+          </a>
+          <a class="pagination__page-number" href="#">
+            3
+          </a>
+          <a class="pagination__page-number" href="#">
+            ...
+          </a>
+          <a class="pagination__page-number" href="#">
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="layout__footer footer">
+    <div class="about-site">
+      <div class="about-site__created-by-text">
+        Created by VitaThemes and Vasin Yuriy | Privacy policy
+      </div>
+      <div class="about-site__contacts">
+        <a class="about-site__contacts-item" href="#">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a class="about-site__contacts-item" href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a class="about-site__contacts-item" href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 </div>
 </body>
 </html>

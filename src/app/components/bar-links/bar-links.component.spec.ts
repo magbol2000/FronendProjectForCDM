@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BarLinksComponent } from './bar-links.component';
+import {BarLinksComponent} from './bar-links.component';
 
 describe('BarLinksComponent', () => {
   let component: BarLinksComponent;
@@ -8,9 +8,9 @@ describe('BarLinksComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BarLinksComponent ]
+      declarations: [BarLinksComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(BarLinksComponent);
     component = fixture.componentInstance;

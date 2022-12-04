@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router, RouterModule} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {INewsItem} from "../../../models/news";
 import {NewsService} from "../../../services/news.service";
 
 @Component({
-  selector: 'app-deleting-news',
+  selector: 'app-remove',
   templateUrl: './deleting-news.component.html',
   styleUrls: ['./deleting-news.component.scss']
 })

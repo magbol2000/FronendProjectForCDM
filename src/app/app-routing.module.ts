@@ -1,41 +1,54 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {MainComponent} from "./pages/main/main.component";
-import {AddingNewsComponent} from "./pages/adding-news/adding-news.component";
-import {NewsDetailsComponent} from "./pages/news-details/news-details.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {MainComponent} from "./pages/news/main/main.component";
+import {AddingNewsComponent} from "./pages/news/edit/adding-news.component";
+import {NewsDetailsComponent} from "./pages/news/details/news-details.component";
 import {NewsResolver} from "./providers/news.resolver";
-import {DeletingNewsComponent} from "./pages/deleting-news/deleting-news.component";
+import {DeletingNewsComponent} from "./pages/news/remove/deleting-news.component";
+import {NotFoundComponent} from "./pages/not-found/not-found.component";
+import {SearchComponent} from "./pages/categories/search/search.component";
+import {CategoryResolver} from "./providers/category.resolver";
+
 
 const routes: Routes = [{
   path: '',
   component: MainComponent
 }, {
-  path: 'adding-news',
+  path: 'add',
   component: AddingNewsComponent,
-},{
-  path: 'adding-news/:id',
+}, {
+  path: 'edit/:id',
   component: AddingNewsComponent,
   resolve: {
     newsResolver: NewsResolver
   }
-},{
-  path: 'deleting-news/:id',
+}, {
+  path: 'remove/:id',
   component: DeletingNewsComponent,
   resolve: {
     newsResolver: NewsResolver
   }
 }, {
-  path: 'news-details/:id',
+  path: 'details/:id',
   component: NewsDetailsComponent,
   resolve: {
     newsResolver: NewsResolver
   }
+}, {
+  path: 'search/:id',
+  component: SearchComponent,
+  resolve: {
+    categoryResolver: CategoryResolver
+  }
+}, {
+  path: '**',
+  component: NotFoundComponent
 }
-// todo 404 page
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'top', onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

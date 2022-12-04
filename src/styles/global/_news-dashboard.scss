@@ -8,6 +8,7 @@
 @include mobile {
   .news-dashboard {
     gap: 48px;
+
     &__spacer {
       display: none;
     }
@@ -17,6 +18,7 @@
 @include desktop {
   .news-dashboard {
     gap: 70px;
+
     &__general-info {
       position: relative;
     }

@@ -3,7 +3,7 @@ import {INewsItem} from "../../models/news";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NewsService} from "../../services/news.service";
-import { DatePipe } from '@angular/common';
+import {DatePipe} from '@angular/common';
 
 
 interface LoginForm {
@@ -65,7 +65,7 @@ export class NewsSendingFormComponent implements OnInit {
       full_news: body.full_news,
       category: "Market",
       audio_name: "Hi",
-      img_name:"hi",
+      img_name: "hi",
       tags: ["hi"],
       data: this.currentDate.toDateString(),
       is_disable_comments: true
@@ -75,7 +75,7 @@ export class NewsSendingFormComponent implements OnInit {
       this._newsService.edit(this.currentNewsItem, this.previousNewsValue.id!).subscribe(
         () => this._router.navigate(['/'])
       )
-    }else {
+    } else {
       this._newsService.create(this.currentNewsItem).subscribe(
         () => this._router.navigate(['/'])
       )
