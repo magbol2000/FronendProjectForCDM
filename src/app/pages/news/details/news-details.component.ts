@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {NewsService} from "../../services/news.service";
+import {NewsService} from "../../../services/news.service";
 import {Observable} from "rxjs";
-import {INewsItem} from "../../models/news";
+import {INewsItem} from "../../../models/news";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
