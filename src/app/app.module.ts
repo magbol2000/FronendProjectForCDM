@@ -26,12 +26,14 @@ import {NewsSendingFormComponent} from './components/news-sending-form/news-send
 import {CommentComponent} from './components/comment/comment.component';
 import {NewsDetailsComponent} from './pages/news/details/news-details.component';
 import {HttpClientModule} from "@angular/common/http";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {DeletingNewsComponent} from './pages/news/remove/deleting-news.component';
 import {FilterCategoriesPipe} from './pipes/filter-categories.pipe'
 import {NotFoundComponent} from './pages/not-found/not-found.component'
 import {NotifyComponent} from "./components/notify/notify.component";
 import {SearchComponent} from './pages/categories/search/search.component';
+import { CommentRemoveComponent } from './pages/comments/comment-remove/comment-remove.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -62,13 +64,16 @@ import {SearchComponent} from './pages/categories/search/search.component';
     FilterCategoriesPipe,
     NotFoundComponent,
     NotifyComponent,
-    SearchComponent
+    SearchComponent,
+    CommentRemoveComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,17 @@
 <div class="comment">
   <img alt="User avatar" class="comment__user-avatar" src="assets/images/user-avatar.png">
-  <div class="comment__describe">
+  <div class="comment__describe spacer">
     <div class="comment__user-name">
-      Mark Newman
+        {{ comment.user_name }}
     </div>
     <div class="comment__data">
-      October 24.2020
+      {{ comment.data | date:'mediumDate' }}
     </div>
     <div class="comment__message">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      {{ comment.message }}
     </div>
   </div>
+  <a [routerLink]="['/comment','remove', comment.id]" class="comment__link">
+    <i class="fa-solid fa-xmark"></i>
+  </a>
 </div>

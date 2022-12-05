@@ -1,15 +1,21 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {INewsItem} from "../../models/news";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NewsService} from "../../services/news.service";
 import {DatePipe} from '@angular/common';
+import {CategoryService} from "../../services/category.service";
+import {tap} from "rxjs";
+import {ICategory} from "../../models/category";
+import {HttpClient} from "@angular/common/http";
 
 
-interface LoginForm {
+interface newsForm {
   news_name: FormControl<string>;
   short_describtion: FormControl<string>;
   full_news: FormControl<string>;
+  are_comments_disabled: FormControl<boolean>;
+  tags: FormControl<string>
 }
 
 @Component({
@@ -19,28 +25,42 @@ interface LoginForm {
   providers: [DatePipe]
 })
 export class NewsSendingFormComponent implements OnInit {
-  public form!: FormGroup<LoginForm>;
+  public form!: FormGroup<newsForm>;
   private isFormEditingValueNow: boolean
   private currentNewsItem: INewsItem;
   private previousNewsValue: INewsItem;
   private currentDate: Date = new Date();
+  public selectedCategory:string;
+  private loading: boolean;
+  public categories: ICategory[] = []
+  public areCommentsDisabled:boolean
+
 
   constructor(
     private _newsService: NewsService,
+    private _categoryService: CategoryService,
     private _fb: FormBuilder,
     private _router: Router,
     private _activatedRoute: ActivatedRoute,
+    private _http: HttpClient,
   ) {
   }
 
   ngOnInit() {
-    this.isFormEditingValueNow = this._activatedRoute.snapshot.data['newsResolver'] != null
+    this.initFormVars()
+    this.initCategories()
+  }
 
+  private initFormVars():void {
+    this.isFormEditingValueNow = this._activatedRoute.snapshot.data['newsResolver'] != null
+    this.loading = true;
 
     this.form = this._fb.nonNullable.group({
-      news_name: ['', Validators.required],
-      short_describtion: ['', Validators.required],
-      full_news: ['', Validators.required]
+      news_name: ['', Validators.required, Validators.minLength(3)],
+      short_describtion: ['', Validators.required,Validators.minLength(3)],
+      full_news: ['', Validators.required, Validators.minLength(3)],
+      are_comments_disabled: [false, Validators.required],
+      tags: ['', Validators.required]
     })
 
     if (this.isFormEditingValueNow) {
@@ -49,11 +69,45 @@ export class NewsSendingFormComponent implements OnInit {
       this.form.patchValue({
         news_name: this.previousNewsValue.news_name,
         short_describtion: this.previousNewsValue.short_describtion,
-        full_news: this.previousNewsValue.full_news
+        full_news: this.previousNewsValue.full_news,
+        are_comments_disabled: this.previousNewsValue.is_disable_comments,
+        tags: this.previousNewsValue.tags.join(' ')
       });
     }
+  }
 
+  private initCategories(): void {
+    this._categoryService.getAll().pipe(
+      tap(() => {
+        this.loading = false
+      }),
+    ).subscribe(
+      value => {
+        this.categories = value
 
+        let categoriesPrepare = value.filter(
+          (next) => {
+            if (this.previousNewsValue)
+              return next.category_name == this.previousNewsValue.category
+            else return false
+          }
+        )
+
+        if (categoriesPrepare.length != 0) {
+          this.selectedCategory = categoriesPrepare[0].category_name
+        }else {
+          this.selectedCategory = this.categories[0].category_name
+        }
+      }
+    )
+  }
+
+  public onCategorySelected(event: any) {
+    this.selectedCategory = event.target.value;
+  }
+
+  public prepareTags(tags: string): string[] {
+    return tags.split(" ")
   }
 
   public submit() {
@@ -63,12 +117,12 @@ export class NewsSendingFormComponent implements OnInit {
       news_name: body.news_name,
       short_describtion: body.short_describtion,
       full_news: body.full_news,
-      category: "Market",
+      category: this.selectedCategory,
       audio_name: "Hi",
       img_name: "hi",
-      tags: ["hi"],
+      tags: this.prepareTags(body.tags),
       data: this.currentDate.toDateString(),
-      is_disable_comments: true
+      is_disable_comments: this.areCommentsDisabled
     }
 
     if (this.isFormEditingValueNow) {

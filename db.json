@@ -13,6 +13,38 @@
       "category_name": "Business"
     }
   ],
+  "comments": [
+    {
+      "id": 2,
+      "user_name": "Ivan",
+      "data": "Sat November 05 2022",
+      "message": "Hello World"
+    },
+    {
+      "user_name": "",
+      "message": "",
+      "data": "Mon Dec 05 2022",
+      "id": 3
+    },
+    {
+      "user_name": "",
+      "message": "",
+      "data": "Mon Dec 05 2022",
+      "id": 4
+    },
+    {
+      "user_name": "sadfsdaf",
+      "message": "fdsafdsaf",
+      "data": "Mon Dec 05 2022",
+      "id": 5
+    },
+    {
+      "user_name": "fdsafsdaf",
+      "message": "fasdfdsa",
+      "data": "Mon Dec 05 2022",
+      "id": 6
+    }
+  ],
   "news": [
     {
       "news_name": "Herzog LLC123",
@@ -250,15 +282,55 @@
       "news_name": "fsadfsadf",
       "short_describtion": "asfsdaf",
       "full_news": "asdfsadf",
-      "category": "Market",
+      "category": "Education",
       "audio_name": "Hi",
       "img_name": "hi",
       "tags": [
         "hi"
       ],
-      "data": "Sun Dec 04 2022",
-      "is_disable_comments": true,
+      "data": "Mon Dec 05 2022",
+      "is_disable_comments": false,
       "id": 39
+    },
+    {
+      "news_name": "dasfdsaf",
+      "short_describtion": "dsafsdaf",
+      "full_news": "fasdfasdf",
+      "category": "Education",
+      "audio_name": "Hi",
+      "img_name": "hi",
+      "tags": [
+        "hi",
+        "gfg"
+      ],
+      "data": "Mon Dec 05 2022",
+      "id": 40
+    },
+    {
+      "news_name": "",
+      "short_describtion": "",
+      "full_news": "",
+      "category": "Market",
+      "audio_name": "Hi",
+      "img_name": "hi",
+      "tags": [
+        ""
+      ],
+      "data": "Mon Dec 05 2022",
+      "id": 41
+    },
+    {
+      "news_name": "",
+      "short_describtion": "sdfasdf",
+      "full_news": "",
+      "category": "Market",
+      "audio_name": "Hi",
+      "img_name": "hi",
+      "tags": [
+        ""
+      ],
+      "data": "Mon Dec 05 2022",
+      "id": 42
     }
   ]
 }

@@ -10,7 +10,7 @@ import {NewsService} from "../../../services/news.service";
 })
 
 export class DeletingNewsComponent implements OnInit {
-  NewsItem: INewsItem;
+  newsItem: INewsItem;
 
   constructor(
     private _activatedRoute: ActivatedRoute,
@@ -20,8 +20,8 @@ export class DeletingNewsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.NewsItem = this._activatedRoute.snapshot.data['newsResolver'];
-    this._newsService.remove(this.NewsItem.id!).subscribe(
+    this.newsItem = this._activatedRoute.snapshot.data['newsResolver'];
+    this._newsService.remove(this.newsItem.id!).subscribe(
       () => this._router.navigate(['/'])
     )
   }

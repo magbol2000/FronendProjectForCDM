@@ -1,10 +1,13 @@
 <script src="../../app-routing.module.ts"></script>
 <div class="layout">
   <header class="layout__header">
-    <app-menu></app-menu>
+    <app-menu
+      [isItMobile]="isItMobile"
+      (isPopupHidden)="getHamburgerState($event)"
+    ></app-menu>
     <div class="spacer"></div>
-    <div class="header__navbar">
-      <app-nav></app-nav>
+    <div class="header__navbar" *ngIf="(isItMobile && !isPopupHidden) || !isItMobile">
+      <app-nav [isItMobile]="isItMobile"></app-nav>
     </div>
   </header>
 
@@ -20,3 +23,4 @@
     <app-about-site></app-about-site>
   </footer>
 </div>
+

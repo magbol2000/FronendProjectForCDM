@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {fromEvent} from "rxjs";
 
 @Component({
   selector: 'app-bar-links',
@@ -6,5 +7,11 @@ import {Component} from '@angular/core';
   styleUrls: ['./bar-links.component.scss']
 })
 export class BarLinksComponent {
+  isPopupHidden: boolean = false;
 
+  onClickCategories() {
+    this.isPopupHidden = !this.isPopupHidden
+  }
+
+  @Input() isItMobile: boolean;
 }

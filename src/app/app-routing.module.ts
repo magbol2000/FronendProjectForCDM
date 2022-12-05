@@ -8,6 +8,8 @@ import {DeletingNewsComponent} from "./pages/news/remove/deleting-news.component
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
 import {SearchComponent} from "./pages/categories/search/search.component";
 import {CategoryResolver} from "./providers/category.resolver";
+import {CommentResolver} from "./providers/comment.resolver";
+import {CommentRemoveComponent} from "./pages/comments/comment-remove/comment-remove.component";
 
 
 const routes: Routes = [{
@@ -40,6 +42,17 @@ const routes: Routes = [{
   resolve: {
     categoryResolver: CategoryResolver
   }
+}, {
+  path: 'comment',
+  children: [
+    {
+      path: 'remove/:id',
+      component: CommentRemoveComponent,
+      resolve: {
+        commentResolver: CommentResolver
+      }
+    }
+  ]
 }, {
   path: '**',
   component: NotFoundComponent

@@ -1,23 +1,30 @@
-<form class="form">
+<form class="form" (ngSubmit)="submit()" [formGroup]="form">
   <label class="form__label form__user-text">
     Comment
-    <textarea class="form__textarea form__field"></textarea>
+    <textarea
+      class="form__textarea form__field"
+      formControlName="message"
+    ></textarea>
   </label>
   <label class="form__label">Name*
-    <input class="form__input form__field" type="text">
+    <input
+      class="form__input form__field"
+      type="text"
+      formControlName="user_name"
+    >
   </label>
   <label class="form__label">Email*
-    <input class="form__input form__field" type="email">
-  </label>
-  <label class="form__label">Website*
-    <input class="form__input form__field" type="url">
-  </label>
-  <label class="form__label-checkbox">
-    <input type="checkbox">
-    Save my name, email, and website in this browser for the next time I comment
+    <input
+      class="form__input form__field"
+      type="email"
+      formControlName="user_email"
+    >
   </label>
   <div>
-    <button class="form__button">
+    <button
+      class="form__button"
+      type="submit"
+    >
       Send
     </button>
   </div>

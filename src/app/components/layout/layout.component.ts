@@ -1,4 +1,5 @@
 import {Component, HostListener} from '@angular/core';
+import {fromEvent} from "rxjs";
 
 @Component({
   selector: 'app-layout',
@@ -7,10 +8,30 @@ import {Component, HostListener} from '@angular/core';
 })
 export class LayoutComponent {
   isHeaderInViewport: boolean = true;
-
+  isItMobile: boolean = this.checkIsItMobileResolution();
+  isPopupHidden: boolean = true
   constructor() {
   }
 
+  ngOnInit() {
+    fromEvent(window, 'resize').subscribe(
+      () => {
+        this.isItMobile = this.checkIsItMobileResolution()
+      }
+    );
+  }
+
+  checkIsItMobileResolution(): boolean {
+    if (window.innerWidth < 768) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  getHamburgerState(newItem: boolean) {
+    this.isPopupHidden = newItem
+  }
 
   public isInViewport(): boolean {
     const box = document.querySelector('.layout__header');

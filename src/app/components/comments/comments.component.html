@@ -1,8 +1,9 @@
 <div class="comments">
   <h2 class="comments__header">Comments</h2>
   <div class="comments__dashboard">
-    <app-comment></app-comment>
-    <app-comment></app-comment>
-    <app-comment></app-comment>
+    <app-comment
+      *ngFor="let comment of comments"
+      [comment]="comment"
+    ></app-comment>
   </div>
 </div>
