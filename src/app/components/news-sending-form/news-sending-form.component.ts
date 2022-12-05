@@ -14,6 +14,8 @@ interface newsForm {
   news_name: FormControl<string>;
   short_describtion: FormControl<string>;
   full_news: FormControl<string>;
+  path_to_audio_file: FormControl<string>;
+  path_to_img_file: FormControl<string>;
   are_comments_disabled: FormControl<boolean>;
   tags: FormControl<string>
 }
@@ -34,7 +36,7 @@ export class NewsSendingFormComponent implements OnInit {
   private loading: boolean;
   public categories: ICategory[] = []
   public areCommentsDisabled:boolean
-
+  public isButtonWarningOn: boolean = false
 
   constructor(
     private _newsService: NewsService,
@@ -56,11 +58,13 @@ export class NewsSendingFormComponent implements OnInit {
     this.loading = true;
 
     this.form = this._fb.nonNullable.group({
-      news_name: ['', Validators.required, Validators.minLength(3)],
-      short_describtion: ['', Validators.required,Validators.minLength(3)],
-      full_news: ['', Validators.required, Validators.minLength(3)],
+      news_name: ['', [Validators.required, Validators.minLength(3)]],
+      short_describtion: ['', [Validators.required,Validators.minLength(3)]],
+      full_news: ['', [Validators.required, Validators.minLength(3)]],
+      path_to_audio_file: ['', [Validators.required, Validators.minLength(3)]],
+      path_to_img_file: ['', [Validators.required, Validators.minLength(3)]],
       are_comments_disabled: [false, Validators.required],
-      tags: ['', Validators.required]
+      tags: [''] 
     })
 
     if (this.isFormEditingValueNow) {
@@ -70,6 +74,8 @@ export class NewsSendingFormComponent implements OnInit {
         news_name: this.previousNewsValue.news_name,
         short_describtion: this.previousNewsValue.short_describtion,
         full_news: this.previousNewsValue.full_news,
+        path_to_audio_file: this.previousNewsValue.audio_name,
+        path_to_img_file: this.previousNewsValue.img_name,
         are_comments_disabled: this.previousNewsValue.is_disable_comments,
         tags: this.previousNewsValue.tags.join(' ')
       });
@@ -111,6 +117,11 @@ export class NewsSendingFormComponent implements OnInit {
   }
 
   public submit() {
+    if (this.form.invalid) {
+      this.isButtonWarningOn = true;
+      return
+    }
+
     const body = this.form.getRawValue(); // add type
 
     this.currentNewsItem = {
@@ -118,8 +129,8 @@ export class NewsSendingFormComponent implements OnInit {
       short_describtion: body.short_describtion,
       full_news: body.full_news,
       category: this.selectedCategory,
-      audio_name: "Hi",
-      img_name: "hi",
+      audio_name: body.path_to_audio_file,
+      img_name: body.path_to_img_file,
       tags: this.prepareTags(body.tags),
       data: this.currentDate.toDateString(),
       is_disable_comments: this.areCommentsDisabled

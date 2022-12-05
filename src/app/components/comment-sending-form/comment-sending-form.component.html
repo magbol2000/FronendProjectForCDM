@@ -1,25 +1,37 @@
 <form class="form" (ngSubmit)="submit()" [formGroup]="form">
-  <label class="form__label form__user-text">
-    Comment
-    <textarea
-      class="form__textarea form__field"
-      formControlName="message"
-    ></textarea>
-  </label>
-  <label class="form__label">Name*
-    <input
-      class="form__input form__field"
-      type="text"
-      formControlName="user_name"
-    >
-  </label>
-  <label class="form__label">Email*
-    <input
-      class="form__input form__field"
-      type="email"
-      formControlName="user_email"
-    >
-  </label>
+  <div *ngIf="form.get('message') as message">
+    <label class="form__label form__user-text">
+      Comment
+      <textarea
+        class="form__textarea form__field"
+        formControlName="message"
+      ></textarea>
+    </label>
+    <app-error *ngIf="message.invalid && message.dirty" [error]="message.errors"></app-error>
+  </div>
+
+  <div *ngIf="form.get('user_name') as user_name">
+    <label class="form__label">Name*
+      <input
+        class="form__input form__field"
+        type="text"
+        formControlName="user_name"
+      >
+    </label>
+    <app-error *ngIf="user_name.invalid && user_name.dirty" [error]="user_name.errors"></app-error>
+  </div>
+
+  <div *ngIf="form.get('user_email') as user_email">
+    <label class="form__label">Email*
+      <input
+        class="form__input form__field"
+        type="email"
+        formControlName="user_email"
+      >
+    </label>
+    <app-error *ngIf="user_email.invalid && user_email.dirty" [error]="user_email.errors"></app-error>
+  </div>
+
   <div>
     <button
       class="form__button"
@@ -27,5 +39,7 @@
     >
       Send
     </button>
+
+    <div class="form__error-message" *ngIf="isButtonWarningOn">Please fill all fields*</div>
   </div>
 </form>

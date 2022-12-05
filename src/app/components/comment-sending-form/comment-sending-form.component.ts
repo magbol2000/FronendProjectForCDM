@@ -16,6 +16,7 @@ interface commentForm {
 })
 export class CommentSendingFormComponent implements OnInit {
   public form!: FormGroup<commentForm>;
+  public isButtonWarningOn: boolean;
 
   constructor(
     private _fb: FormBuilder,
@@ -25,13 +26,17 @@ export class CommentSendingFormComponent implements OnInit {
 
   ngOnInit() {
     this.form = this._fb.nonNullable.group({
-      user_name: ['', Validators.required],
-      message: ['', Validators.required],
-      user_email: ['', Validators.required],
+      user_name: ['', [Validators.required, Validators.minLength(3)]],
+      message: ['', [Validators.required, Validators.minLength(3)]],
+      user_email: ['', [Validators.required, Validators.minLength(3)]],
     })
   }
 
   public submit() {
+    if (this.form.invalid) {
+      this.isButtonWarningOn = true
+      return
+    }
 
     const body = this.form.getRawValue();
     let currentData: Date = new Date;

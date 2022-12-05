@@ -1,5 +1,5 @@
 <form (ngSubmit)="submit()" [formGroup]="form" class="form">
-  <div>
+  <div *ngIf="form.get('news_name') as news_name">
     <label class="form__label">Name of the news*
       <input
         class="form__input form__field"
@@ -7,16 +7,18 @@
         type="text"
       />
     </label>
+    <app-error *ngIf="news_name.invalid && news_name.dirty" [error]="news_name.errors"></app-error>
   </div>
 
-  <div>
-  <label class="form__label form__user-text">
-    Short-describtion*
-    <textarea
-      class="form__textarea form__field"
-      formControlName="short_describtion"
-    ></textarea>
-  </label>
+  <div *ngIf="form.get('short_describtion') as short_describtion">
+    <label class="form__label form__user-text">
+      Short-describtion*
+      <textarea
+        class="form__textarea form__field"
+        formControlName="short_describtion"
+      ></textarea>
+    </label>
+    <app-error *ngIf="short_describtion.invalid && short_describtion.dirty" [error]="short_describtion.errors"></app-error>
   </div>
 
   <div>
@@ -31,7 +33,7 @@
     </label>
   </div>
 
-  <div>
+  <div *ngIf="form.get('full_news') as full_news">
     <label class="form__label form__user-text">
       Full-news*
       <textarea
@@ -39,18 +41,29 @@
         formControlName="full_news"
       ></textarea>
     </label>
+    <app-error *ngIf="full_news.invalid && full_news.dirty" [error]="full_news.errors"></app-error>
   </div>
 
-  <div>
-    <label class="form__label">Load audio
-      <input type="file"/>
+  <div *ngIf="form.get('path_to_audio_file') as path_to_audio_file">
+    <label class="form__label">Load audio*
+      <input
+        class="form__input form__field"
+        formControlName="path_to_audio_file"
+        type="text"
+      />
     </label>
+    <app-error *ngIf="path_to_audio_file.invalid && path_to_audio_file.dirty" [error]="path_to_audio_file.errors"></app-error>
   </div>
 
-  <div>
-    <label class="form__label">Load general img
-      <input type="file"/>
+  <div *ngIf="form.get('path_to_img_file') as path_to_img_file">
+    <label class="form__label">Load general img*
+      <input
+        class="form__input form__field"
+        formControlName="path_to_img_file"
+        type="text"
+      />
     </label>
+    <app-error *ngIf="path_to_img_file.invalid && path_to_img_file.dirty" [error]="path_to_img_file.errors"></app-error>
   </div>
 
   <div>
@@ -80,5 +93,7 @@
       type="submit"
     >Send
     </button>
+
+    <div class="form__error-message" *ngIf="isButtonWarningOn">Please fill all fields*</div>
   </div>
 </form>
