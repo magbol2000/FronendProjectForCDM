@@ -1,3 +1,4 @@
+<!--Это что?-->
 <script src="../../app-routing.module.ts"></script>
 <div class="layout">
   <header class="layout__header">
@@ -6,12 +7,14 @@
       (isPopupHidden)="getHamburgerState($event)"
     ></app-menu>
     <div class="spacer"></div>
+<!--    Условие переписать проще можно-->
     <div class="header__navbar" *ngIf="(isItMobile && !isPopupHidden) || !isItMobile">
       <app-nav [isItMobile]="isItMobile"></app-nav>
     </div>
   </header>
 
   <main class="layout__main">
+<!--    Писал по этому поводу-->
     <app-notify
       [isHeaderInViewport]="isHeaderInViewport"
     ></app-notify>

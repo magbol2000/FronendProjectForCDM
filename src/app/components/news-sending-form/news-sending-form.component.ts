@@ -9,7 +9,6 @@ import {tap} from "rxjs";
 import {ICategory} from "../../models/category";
 import {HttpClient} from "@angular/common/http";
 
-
 interface newsForm {
   news_name: FormControl<string>;
   short_describtion: FormControl<string>;
@@ -55,6 +54,9 @@ export class NewsSendingFormComponent implements OnInit {
 
   private initFormVars():void {
     this.isFormEditingValueNow = this._activatedRoute.snapshot.data['newsResolver'] != null
+    // loading как правило юзается для обработки ассинхронных операций.
+    // Например, чтобы дизейблить кнопку сохранения новости когда ты уже нажал её и ждешь когда бек отработает, чтобы юзер не мог спамить запросами
+    // Для синхронных операций нет смысла его использовать
     this.loading = true;
 
     this.form = this._fb.nonNullable.group({
@@ -64,12 +66,13 @@ export class NewsSendingFormComponent implements OnInit {
       path_to_audio_file: ['', [Validators.required, Validators.minLength(3)]],
       path_to_img_file: ['', [Validators.required, Validators.minLength(3)]],
       are_comments_disabled: [false, Validators.required],
-      tags: [''] 
+      tags: ['']
     })
 
     if (this.isFormEditingValueNow) {
       this.previousNewsValue = this._activatedRoute.snapshot.data['newsResolver'];
 
+      // Не надо передевать все значение по отдельности, использую patchValue и spread оператор
       this.form.patchValue({
         news_name: this.previousNewsValue.news_name,
         short_describtion: this.previousNewsValue.short_describtion,

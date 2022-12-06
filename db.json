@@ -55,12 +55,6 @@
       "message": "sdafsadf",
       "data": "Mon Dec 05 2022",
       "id": 8
-    },
-    {
-      "user_name": "123",
-      "message": "123",
-      "data": "Mon Dec 05 2022",
-      "id": 9
     }
   ],
   "news": [
@@ -297,20 +291,6 @@
       "id": 38
     },
     {
-      "news_name": "fsadfsadf",
-      "short_describtion": "asfsdaf",
-      "full_news": "asdfsadf",
-      "category": "Education",
-      "audio_name": "Hi",
-      "img_name": "hi",
-      "tags": [
-        "hi"
-      ],
-      "data": "Mon Dec 05 2022",
-      "is_disable_comments": false,
-      "id": 39
-    },
-    {
       "news_name": "dasfdsaf",
       "short_describtion": "dsafsdaf",
       "full_news": "fasdfasdf",
@@ -339,7 +319,7 @@
     },
     {
       "news_name": "fsdaffasdf",
-      "short_describtion": "sdafdsafsdaf",
+      "short_describtion": "sdafdsafsdaf123ads",
       "full_news": "sdafsdafsdafsda",
       "category": "Business",
       "audio_name": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
@@ -347,7 +327,8 @@
       "tags": [
         "Audio"
       ],
-      "data": "Mon Dec 05 2022",
+      "data": "Tue Dec 06 2022",
+      "is_disable_comments": true,
       "id": 44
     }
   ]

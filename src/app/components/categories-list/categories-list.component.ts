@@ -19,6 +19,8 @@ export class CategoriesListComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
+
+    // https://habr.com/ru/post/484762/
     this._categoryService.getAll().pipe(
       tap(() => {
         this.loading = false

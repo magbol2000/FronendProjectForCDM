@@ -7,6 +7,7 @@ import {INewsItem} from "../../models/news";
   styleUrls: ['./additional-info.component.scss']
 })
 export class AdditionalInfoComponent {
+  // переменная избыточна
   currentData: Date = new Date();
   @Input() isItShortNews: boolean;
   @Input() newsItem: INewsItem;

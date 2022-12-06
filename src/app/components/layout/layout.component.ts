@@ -1,5 +1,5 @@
-import {Component, HostListener} from '@angular/core';
-import {fromEvent} from "rxjs";
+import { Component, HostListener } from '@angular/core';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-layout',
@@ -9,7 +9,10 @@ import {fromEvent} from "rxjs";
 export class LayoutComponent {
   isHeaderInViewport: boolean = true;
   isItMobile: boolean = this.checkIsItMobileResolution();
+  // забыл точку с запятой в конце. Пробегись линтером
   isPopupHidden: boolean = true
+
+  // Пустой конструктор
   constructor() {
   }
 
@@ -21,6 +24,8 @@ export class LayoutComponent {
     );
   }
 
+  // Это делается по-другому, погугли "breakpointobserver in angular" или посмотри в нашем проекте
+  // + надо вынести в сервис отдельный
   checkIsItMobileResolution(): boolean {
     if (window.innerWidth < 768) {
       return true;
@@ -33,6 +38,9 @@ export class LayoutComponent {
     this.isPopupHidden = newItem
   }
 
+  //Этот геморрой с нотификациями и логикой вокруг него избыточный. Сделай чтобы нотификация об ошибке всегда была наверху, position: absolute top: 0
+  // Твоя реализация не содержит каких-либо преимуществ
+  // Плюс этому коду место явно не здесь, а в отдельном сервисе, но повторюсь это всё избыточно, можешь посмотреть наши нотификации об ошибках
   public isInViewport(): boolean {
     const box = document.querySelector('.layout__header');
     const rect = box!.getBoundingClientRect();
@@ -46,6 +54,7 @@ export class LayoutComponent {
 
   @HostListener('window:scroll', ['$event'])
   isScrolledIntoView() {
+    //     this.isHeaderInViewport = this.isInViewport();
     if (this.isInViewport()) {
       this.isHeaderInViewport = true;
     } else {

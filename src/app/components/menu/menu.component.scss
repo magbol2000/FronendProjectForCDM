@@ -12,6 +12,7 @@
 @include desktop {
   .menu {
     &__hamburger {
+      // Для этого есть ngIf, в паре с breakPoint observer можно добить этого эффекта
       display: none !important;
     }
   }

@@ -1,4 +1,9 @@
 <div class="additional-info">
+  <!--  1. Вызов функции в темплейтах в 99.9% плохая идея, она будет вызываться при каждом срабатываении change detection
+    Добавь console.log в неё и посмотри что будет.
+    2. == проверка почти не используется в js вместо неё используется ===,погугли
+    3. isItShortNews == true можно переписать просто как isItShortNews
+    -->
   <div *ngIf="isItShortNews == true && checkIsNewsNew()" class="additional-info__new">
     New
   </div>
