@@ -10,9 +10,11 @@ export class MenuComponent {
 
   public onClickHamburger() {
     this.isPopupHiddenCounter = !this.isPopupHiddenCounter
+      // Зачем !! ?
     this.isPopupHidden.emit(!!this.isPopupHiddenCounter)
   }
 
+  // Переменные всегда идут перед функциями
   @Input() isItMobile: boolean;
   @Output() isPopupHidden = new EventEmitter<boolean>();
 }

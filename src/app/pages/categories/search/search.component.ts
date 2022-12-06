@@ -17,6 +17,7 @@ export class SearchComponent {
   }
 
   ngOnInit() {
+    // Переменная избыточна
     this.category = this._activatedRoute.snapshot.data['categoryResolver'];
     this.searchData = this.category.category_name
   }

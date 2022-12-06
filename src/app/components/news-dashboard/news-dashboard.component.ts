@@ -29,6 +29,7 @@ export class NewsDashboardComponent implements OnInit {
       }),
     ).subscribe(
       value => {
+        // избыточная переменная
         this.newsGroup = value;
         this.reversedNewsGroup = this.newsGroup.reverse();
         this.lastNewsItem = this.reversedNewsGroup[0]

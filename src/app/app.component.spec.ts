@@ -20,12 +20,14 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+  // Бесполезный тест
   it(`should have as title 'audio-news'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('audio-news');
   });
 
+  // падающий
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
