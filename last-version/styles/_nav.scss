@@ -1,9 +1,0 @@
-@import "mixins";
-
-@include mobile {
-  .nav {
-    &__bar-links {
-      padding-top: 45px;
-    }
-  }
-}

@@ -6,5 +6,11 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-  @Input() isItMobile: boolean
+  isPopupHidden: boolean = false;
+
+  onClickCategories() {
+    this.isPopupHidden = !this.isPopupHidden
+  }
+
+  @Input() isItMobile: boolean;
 }

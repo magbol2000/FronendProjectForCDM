@@ -1,16 +1,11 @@
 <div class="additional-info">
-  <!--  1. Вызов функции в темплейтах в 99.9% плохая идея, она будет вызываться при каждом срабатываении change detection
-    Добавь console.log в неё и посмотри что будет.
-    2. == проверка почти не используется в js вместо неё используется ===,погугли
-    3. isItShortNews == true можно переписать просто как isItShortNews
-    -->
-  <div *ngIf="isItShortNews == true && checkIsNewsNew()" class="additional-info__new">
+  <div *ngIf="isItShortNews && isNewsNew" class="additional-info__new">
     New
   </div>
   <div class="additional-info__data spacer">
-    {{ newsItem.category }} | {{ newsItem.data | date:'mediumDate' }}
+    {{ newsItem.category }} | {{ newsItem.date | date:'mediumDate' }}
   </div>
-  <div *ngIf="isItShortNews == true">
+  <div *ngIf="isItShortNews">
     <a [routerLink]="['/edit', newsItem.id]" class="additional-info__link"><i
       class="fa-sharp fa-solid fa-pen-to-square"></i></a>
     <a [routerLink]="['/remove', newsItem.id]" class="additional-info__link"><i class="fa-solid fa-xmark"></i></a>

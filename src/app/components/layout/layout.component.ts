@@ -10,11 +10,7 @@ export class LayoutComponent {
   isHeaderInViewport: boolean = true;
   isItMobile: boolean = this.checkIsItMobileResolution();
   // забыл точку с запятой в конце. Пробегись линтером
-  isPopupHidden: boolean = true
-
-  // Пустой конструктор
-  constructor() {
-  }
+  isPopupHidden: boolean = true;
 
   ngOnInit() {
     fromEvent(window, 'resize').subscribe(
@@ -54,7 +50,6 @@ export class LayoutComponent {
 
   @HostListener('window:scroll', ['$event'])
   isScrolledIntoView() {
-    //     this.isHeaderInViewport = this.isInViewport();
     if (this.isInViewport()) {
       this.isHeaderInViewport = true;
     } else {

@@ -6,15 +6,12 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  @Input() isItMobile: boolean;
+  @Output() isPopupHidden = new EventEmitter<boolean>();
   isPopupHiddenCounter: boolean = true
 
   public onClickHamburger() {
     this.isPopupHiddenCounter = !this.isPopupHiddenCounter
-      // Зачем !! ?
-    this.isPopupHidden.emit(!!this.isPopupHiddenCounter)
+    this.isPopupHidden.emit(this.isPopupHiddenCounter)
   }
-
-  // Переменные всегда идут перед функциями
-  @Input() isItMobile: boolean;
-  @Output() isPopupHidden = new EventEmitter<boolean>();
 }

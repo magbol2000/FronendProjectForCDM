@@ -1,18 +1,18 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {BarLinksComponent} from './bar-links.component';
+import {GeneralNewsComponent} from './general-news.component';
 
-describe('BarLinksComponent', () => {
-  let component: BarLinksComponent;
-  let fixture: ComponentFixture<BarLinksComponent>;
+describe('ShortNewsOfTheDayComponent', () => {
+  let component: GeneralNewsComponent;
+  let fixture: ComponentFixture<GeneralNewsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BarLinksComponent]
+      declarations: [GeneralNewsComponent]
     })
       .compileComponents();
 
-    fixture = TestBed.createComponent(BarLinksComponent);
+    fixture = TestBed.createComponent(GeneralNewsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

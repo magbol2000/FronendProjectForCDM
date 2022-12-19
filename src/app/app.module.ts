@@ -7,10 +7,9 @@ import {MainComponent} from './pages/news/main/main.component';
 import {AboutSiteComponent} from './components/about-site/about-site.component';
 import {MenuComponent} from './components/menu/menu.component';
 import {NavComponent} from './components/nav/nav.component';
-import {BarLinksComponent} from './components/bar-links/bar-links.component';
 import {CategoriesListComponent} from './components/categories-list/categories-list.component';
 import {LayoutComponent} from './components/layout/layout.component';
-import {ShortNewsOfTheDayComponent} from './components/short-news-of-the-day/short-news-of-the-day.component';
+import {GeneralNewsComponent} from './components/general-news/general-news.component';
 import {SocialMediaComponent} from './components/social-media/social-media.component';
 import {NewsDashboardComponent} from './components/news-dashboard/news-dashboard.component';
 import {AdditionalInfoComponent} from './components/additional-info/additional-info.component';
@@ -33,7 +32,7 @@ import {NotFoundComponent} from './pages/not-found/not-found.component'
 import {NotifyComponent} from "./components/notify/notify.component";
 import {SearchComponent} from './pages/categories/search/search.component';
 import { CommentRemoveComponent } from './pages/comments/comment-remove/comment-remove.component';
-import { ErrorComponent } from './components/error/error.component';
+import { FormErrorComponent } from './components/form-error/form-error.component';
 
 @NgModule({
   declarations: [
@@ -42,10 +41,9 @@ import { ErrorComponent } from './components/error/error.component';
     AboutSiteComponent,
     MenuComponent,
     NavComponent,
-    BarLinksComponent,
     CategoriesListComponent,
     LayoutComponent,
-    ShortNewsOfTheDayComponent,
+    GeneralNewsComponent,
     SocialMediaComponent,
     NewsDashboardComponent,
     AdditionalInfoComponent,
@@ -66,7 +64,7 @@ import { ErrorComponent } from './components/error/error.component';
     NotifyComponent,
     SearchComponent,
     CommentRemoveComponent,
-    ErrorComponent
+    FormErrorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,16 @@
 <div class="short-news-of-the-day">
-<!--  Нет необходимости писать this в темплейте-->
   <img alt="Picture for short news of the day" class="short-news-of-the-day__picture"
-       src="{{this.lastNewsItem.img_name}}">
+       src="{{lastNewsItem.img_name}}">
   <div class="short-news-of-the-day__header">
     <h1 class="short-news-of-the-day__text">
-      {{ this.lastNewsItem.news_name }}
+      {{ lastNewsItem.news_name }}
     </h1>
     <app-additional-info
       *ngIf="!isItGeneralPage"
-      [newsItem]="lastNewsItem"
+      [setNewsItem]="lastNewsItem"
     ></app-additional-info>
   </div>
-  <audio class="short-news-of-the-day__audio" controls src="{{this.lastNewsItem.audio_name}}" alt="Audio for short news of the day"></audio>
+  <audio class="short-news-of-the-day__audio" controls src="{{lastNewsItem.audio_name}}" alt="Audio for short news of the day"></audio>
   <div>
     <h3 class="short-news-of-the-day__listen-on-text">Listen on</h3>
     <div class="short-news-of-the-day__social-media">

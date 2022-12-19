@@ -9,7 +9,9 @@ import {IComment} from "../../models/comment";
 })
 export class CommentsComponent implements OnInit {
   comments: IComment[]
+  reverseComments: IComment[]
   countOfComments: number;
+
   constructor(
     private _commentService: CommentService
   ) {
@@ -19,7 +21,8 @@ export class CommentsComponent implements OnInit {
     this._commentService.getAll().subscribe(
       value => {
         this.comments = value;
-        this.countOfComments = this.comments.length
+        this.countOfComments = this.comments.length;
+        this.reverseComments = this.comments
       }
     )
   }

@@ -7,8 +7,6 @@ export interface INewsItem {
   audio_name: string,
   img_name: string,
   tags: string[],
-  // Лучше всё же тип Data использовать, так ты сможешь преобразовывать дату и проводить всячиские манипуляции
-  // На сегодняшнем созвоне говорилось про это
-  data: string,
+  date: Date,
   is_disable_comments?: boolean
 }

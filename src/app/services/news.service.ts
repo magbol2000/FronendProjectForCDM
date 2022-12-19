@@ -43,7 +43,7 @@ export class NewsService {
     )
   }
 
-  public remove(id: number): Observable<unknown> {
+  public remove(id: number): Observable<object | boolean> {
     return this._http.delete(`${this.api}${id}`).pipe(
       catchError(this.errorHandler.bind(this))
     )

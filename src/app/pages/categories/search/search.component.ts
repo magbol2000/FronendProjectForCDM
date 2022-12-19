@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {ICategory} from "../../../models/category";
 
 @Component({
   selector: 'app-search',
@@ -8,7 +7,6 @@ import {ICategory} from "../../../models/category";
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
-  category: ICategory;
   searchData: string = "*";
 
   constructor(
@@ -17,8 +15,6 @@ export class SearchComponent {
   }
 
   ngOnInit() {
-    // Переменная избыточна
-    this.category = this._activatedRoute.snapshot.data['categoryResolver'];
-    this.searchData = this.category.category_name
+    this.searchData = this._activatedRoute.snapshot.data['categoryResolver'].category_name
   }
 }

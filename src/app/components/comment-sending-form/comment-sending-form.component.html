@@ -7,7 +7,7 @@
         formControlName="message"
       ></textarea>
     </label>
-    <app-error *ngIf="message.invalid && message.dirty" [error]="message.errors"></app-error>
+    <app-form-error *ngIf="message.invalid && message.dirty" [error]="message.errors"></app-form-error>
   </div>
 
   <div *ngIf="form.get('user_name') as user_name">
@@ -18,7 +18,7 @@
         formControlName="user_name"
       >
     </label>
-    <app-error *ngIf="user_name.invalid && user_name.dirty" [error]="user_name.errors"></app-error>
+    <app-form-error *ngIf="user_name.invalid && user_name.dirty" [error]="user_name.errors"></app-form-error>
   </div>
 
   <div *ngIf="form.get('user_email') as user_email">
@@ -29,7 +29,7 @@
         formControlName="user_email"
       >
     </label>
-    <app-error *ngIf="user_email.invalid && user_email.dirty" [error]="user_email.errors"></app-error>
+    <app-form-error *ngIf="user_email.invalid && user_email.dirty" [error]="user_email.errors"></app-form-error>
   </div>
 
   <div>

@@ -2,7 +2,7 @@
   <h2 class="comments__header">Comments</h2>
   <div class="comments__dashboard">
     <app-comment
-      *ngFor="let comment of comments.reverse()"
+      *ngFor="let comment of reverseComments"
       [comment]="comment"
     ></app-comment>
   </div>

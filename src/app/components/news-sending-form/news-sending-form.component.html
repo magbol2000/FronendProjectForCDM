@@ -7,7 +7,7 @@
         type="text"
       />
     </label>
-    <app-error *ngIf="news_name.invalid && news_name.dirty" [error]="news_name.errors"></app-error>
+    <app-form-error *ngIf="news_name.invalid && news_name.dirty" [error]="news_name.errors"></app-form-error>
   </div>
 
   <div *ngIf="form.get('short_describtion') as short_describtion">
@@ -18,7 +18,7 @@
         formControlName="short_describtion"
       ></textarea>
     </label>
-    <app-error *ngIf="short_describtion.invalid && short_describtion.dirty" [error]="short_describtion.errors"></app-error>
+    <app-form-error *ngIf="short_describtion.invalid && short_describtion.dirty" [error]="short_describtion.errors"></app-form-error>
   </div>
 
   <div>
@@ -41,29 +41,29 @@
         formControlName="full_news"
       ></textarea>
     </label>
-    <app-error *ngIf="full_news.invalid && full_news.dirty" [error]="full_news.errors"></app-error>
+    <app-form-error *ngIf="full_news.invalid && full_news.dirty" [error]="full_news.errors"></app-form-error>
   </div>
 
-  <div *ngIf="form.get('path_to_audio_file') as path_to_audio_file">
+  <div *ngIf="form.get('audio_name') as audio_name">
     <label class="form__label">Load audio*
       <input
         class="form__input form__field"
-        formControlName="path_to_audio_file"
+        formControlName="audio_name"
         type="text"
       />
     </label>
-    <app-error *ngIf="path_to_audio_file.invalid && path_to_audio_file.dirty" [error]="path_to_audio_file.errors"></app-error>
+    <app-form-error *ngIf="audio_name.invalid && audio_name.dirty" [error]="audio_name.errors"></app-form-error>
   </div>
 
-  <div *ngIf="form.get('path_to_img_file') as path_to_img_file">
+  <div *ngIf="form.get('img_name') as img_name">
     <label class="form__label">Load general img*
       <input
         class="form__input form__field"
-        formControlName="path_to_img_file"
+        formControlName="img_name"
         type="text"
       />
     </label>
-    <app-error *ngIf="path_to_img_file.invalid && path_to_img_file.dirty" [error]="path_to_img_file.errors"></app-error>
+    <app-form-error *ngIf="img_name.invalid && img_name.dirty" [error]="img_name.errors"></app-form-error>
   </div>
 
   <div>

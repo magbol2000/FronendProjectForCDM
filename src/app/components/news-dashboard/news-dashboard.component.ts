@@ -9,10 +9,10 @@ import {tap} from "rxjs";
   styleUrls: ['./news-dashboard.component.scss']
 })
 export class NewsDashboardComponent implements OnInit {
-  newsGroup: INewsItem[];
   reversedNewsGroup: INewsItem[];
   loading: boolean = false;
   lastNewsItem: INewsItem;
+
   @Input() searchQuery: string = '';
   @Output() lastNewsItemFromOutput = new EventEmitter<{ NewsItem: INewsItem }>();
 
@@ -29,9 +29,7 @@ export class NewsDashboardComponent implements OnInit {
       }),
     ).subscribe(
       value => {
-        // избыточная переменная
-        this.newsGroup = value;
-        this.reversedNewsGroup = this.newsGroup.reverse();
+        this.reversedNewsGroup = value.reverse();
         this.lastNewsItem = this.reversedNewsGroup[0]
         this.lastNewsItemFromOutput.emit({NewsItem: this.lastNewsItem});
       }

@@ -1,9 +1,70 @@
 @import "mixins";
 
+.nav {
+  display: flex;
+  gap: 30px;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__donate {
+    display: flex;
+    gap: 6px;
+
+    &:hover {
+      color: var(--selection-text-color);
+    }
+  }
+
+  &__more-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__categories-button {
+    visibility: visible;
+  }
+
+  &__text-item {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__double-items {
+    display: block;
+  }
+}
+
+@include desktop {
+  .nav {
+    position: relative;
+    gap: 30px;
+
+    &__popup {
+      position: relative;
+      visibility: hidden;
+
+      &:hover {
+        visibility: visible;
+      }
+    }
+  }
+}
+
 @include mobile {
   .nav {
-    &__bar-links {
-      padding-top: 45px;
-    }
+    flex-direction: column;
+    padding-top: 45px;
   }
 }

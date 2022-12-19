@@ -14,6 +14,8 @@ export class NotifyComponent {
   ) {
   }
 
+
+
   public onButton() {
     this._errorService.clear()
   }

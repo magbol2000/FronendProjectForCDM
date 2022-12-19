@@ -1,7 +1,7 @@
 <div class="view-news">
-  <app-short-news-of-the-day
+  <app-general-news
     [setNewsItem]="newsItem"
-  ></app-short-news-of-the-day>
+  ></app-general-news>
   <app-full-news [newsItem]="newsItem"></app-full-news>
   <app-reply *ngIf="!newsItem.is_disable_comments"></app-reply>
   <app-comments *ngIf="!newsItem.is_disable_comments"></app-comments>

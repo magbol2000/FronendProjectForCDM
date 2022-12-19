@@ -1,5 +1,26 @@
-<nav class="nav">
-  <div class="nav__bar-links">
-    <app-bar-links [isItMobile]="isItMobile"></app-bar-links>
+<div class="nav">
+  <div class="nav__more-links nav__item">
+    <div class="nav__popup">
+      <!--      Посмотри как реализовано выпадающее меню в интернетах-->
+      <button
+        class="nav__categories-button nav__text-item nav__double-items"
+        (click)="onClickCategories()"
+      >
+        Categories
+        <i class="fa-solid fa-chevron-up" *ngIf="!isPopupHidden"></i>
+        <i class="fa-solid fa-chevron-down" *ngIf="isPopupHidden"></i>
+      </button>
+
+      <app-categories-list
+        *ngIf="!isPopupHidden || !isItMobile"
+      ></app-categories-list>
+    </div>
   </div>
-</nav>
+
+  <button class="nav__item nav__text-item nav__donate nav__link nav__double-items">
+    <i class="fa-regular fa-heart"></i>
+    Donate
+  </button>
+
+  <a class="nav__item nav__text-item nav__link " routerLink="/add">Send your news</a>
+</div>

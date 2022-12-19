@@ -5,13 +5,15 @@ import {INewsItem} from '../models/news'
   name: 'filterCategories'
 })
 export class FilterCategoriesPipe implements PipeTransform {
-  // Надо поменять параметры местами, если один из параметров имеет значение по-умолчанию, он ставится последним
-  // Например, если ты сейчас не захочешь передавать newsGroup, у тебя не получится этого сделать
-  transform(newsGroup: INewsItem[] = [], category: string): INewsItem[] {
-    if (category == '' || category == '*') {
+  transform(newsGroup: INewsItem[], category: string): INewsItem[] {
+    if (newsGroup === undefined) {
+      return []
+    }
+
+    if (category === '' || category === '*') {
       return newsGroup
     }
-    return newsGroup.filter(newsItem => newsItem.category.toLowerCase() == category.toLowerCase())
+    return newsGroup.filter(newsItem => newsItem.category.toLowerCase() === category.toLowerCase())
   }
 
 }
