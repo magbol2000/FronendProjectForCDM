@@ -1,69 +1,69 @@
 <form (ngSubmit)="submit()" [formGroup]="form" class="form">
-  <div *ngIf="form.get('news_name') as news_name">
+  <div *ngIf="form.get('newsName') as newsName">
     <label class="form__label">Name of the news*
       <input
         class="form__input form__field"
-        formControlName="news_name"
+        formControlName="newsName"
         type="text"
       />
     </label>
-    <app-form-error *ngIf="news_name.invalid && news_name.dirty" [error]="news_name.errors"></app-form-error>
+    <app-form-error *ngIf="newsName.invalid && newsName.dirty" [error]="newsName.errors"></app-form-error>
   </div>
 
-  <div *ngIf="form.get('short_describtion') as short_describtion">
+  <div *ngIf="form.get('shortDescribtion') as shortDescribtion">
     <label class="form__label form__user-text">
       Short-describtion*
       <textarea
         class="form__textarea form__field"
-        formControlName="short_describtion"
+        formControlName="shortDescribtion"
       ></textarea>
     </label>
-    <app-form-error *ngIf="short_describtion.invalid && short_describtion.dirty" [error]="short_describtion.errors"></app-form-error>
+    <app-form-error *ngIf="shortDescribtion.invalid && shortDescribtion.dirty" [error]="shortDescribtion.errors"></app-form-error>
   </div>
 
   <div>
     <label class="form__label">Category*
       <select class="form__category" (change)="onCategorySelected($event)">
         <option *ngFor="let category of categories"
-                [selected]="category.category_name == selectedCategory"
-                value="{{category.category_name}}">
-          {{category.category_name}}
+                [selected]="category.categoryName == selectedCategory"
+                value="{{category.categoryName}}">
+          {{category.categoryName}}
         </option>
       </select>
     </label>
   </div>
 
-  <div *ngIf="form.get('full_news') as full_news">
+  <div *ngIf="form.get('fullNews') as fullNews">
     <label class="form__label form__user-text">
       Full-news*
       <textarea
         class="form__textarea form__field"
-        formControlName="full_news"
+        formControlName="fullNews"
       ></textarea>
     </label>
-    <app-form-error *ngIf="full_news.invalid && full_news.dirty" [error]="full_news.errors"></app-form-error>
+    <app-form-error *ngIf="fullNews.invalid && fullNews.dirty" [error]="fullNews.errors"></app-form-error>
   </div>
 
-  <div *ngIf="form.get('audio_name') as audio_name">
+  <div *ngIf="form.get('audioName') as audioName">
     <label class="form__label">Load audio*
       <input
         class="form__input form__field"
-        formControlName="audio_name"
+        formControlName="audioName"
         type="text"
       />
     </label>
-    <app-form-error *ngIf="audio_name.invalid && audio_name.dirty" [error]="audio_name.errors"></app-form-error>
+    <app-form-error *ngIf="audioName.invalid && audioName.dirty" [error]="audioName.errors"></app-form-error>
   </div>
 
-  <div *ngIf="form.get('img_name') as img_name">
+  <div *ngIf="form.get('imgName') as imgName">
     <label class="form__label">Load general img*
       <input
         class="form__input form__field"
-        formControlName="img_name"
+        formControlName="imgName"
         type="text"
       />
     </label>
-    <app-form-error *ngIf="img_name.invalid && img_name.dirty" [error]="img_name.errors"></app-form-error>
+    <app-form-error *ngIf="imgName.invalid && imgName.dirty" [error]="imgName.errors"></app-form-error>
   </div>
 
   <div>
@@ -81,7 +81,7 @@
       <input type="checkbox"
              [checked]=areCommentsDisabled
              (change)="areCommentsDisabled = !areCommentsDisabled"
-             formControlName="are_comments_disabled"
+             formControlName="areCommentsDisabled"
       />
       Are comments disabled?
     </label>

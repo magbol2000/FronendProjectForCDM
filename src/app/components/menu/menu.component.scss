@@ -2,18 +2,19 @@
 
 .menu {
   display: flex;
-  align-items: center;
 
   &__logo {
     width: 93px;
   }
+
+  &__general-navbar {
+    display: flex;
+    align-items: center;
+  }
 }
 
-@include desktop {
+@include mobile {
   .menu {
-    &__hamburger {
-      // Для этого есть ngIf, в паре с breakPoint observer можно добить этого эффекта
-      display: none !important;
-    }
+    flex-direction: column;
   }
 }

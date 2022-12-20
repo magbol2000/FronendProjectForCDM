@@ -15,6 +15,6 @@ export class SearchComponent {
   }
 
   ngOnInit() {
-    this.searchData = this._activatedRoute.snapshot.data['categoryResolver'].category_name
+    this.searchData = this._activatedRoute.snapshot.data['categoryResolver'].categoryName
   }
 }

@@ -1,10 +1,9 @@
 <div class="nav">
   <div class="nav__more-links nav__item">
     <div class="nav__popup">
-      <!--      Посмотри как реализовано выпадающее меню в интернетах-->
       <button
         class="nav__categories-button nav__text-item nav__double-items"
-        (click)="onClickCategories()"
+        (click)="isPopupHidden = !isPopupHidden"
       >
         Categories
         <i class="fa-solid fa-chevron-up" *ngIf="!isPopupHidden"></i>
@@ -12,7 +11,7 @@
       </button>
 
       <app-categories-list
-        *ngIf="!isPopupHidden || !isItMobile"
+        *ngIf="!isPopupHidden || (_mobileService.isDesktop$() | async)"
       ></app-categories-list>
     </div>
   </div>

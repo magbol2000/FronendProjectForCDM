@@ -9,9 +9,5 @@ import {Router, RouterStateSnapshot} from "@angular/router";
   styleUrls: ['./comment.component.scss']
 })
 export class CommentComponent {
-
-  constructor(
-  ) {}
-
   @Input() comment: IComment
 }

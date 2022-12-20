@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
+import {MobileService} from "../../services/mobile.service";
 
 @Component({
   selector: 'app-nav',
@@ -8,9 +9,8 @@ import {Component, Input} from '@angular/core';
 export class NavComponent {
   isPopupHidden: boolean = false;
 
-  onClickCategories() {
-    this.isPopupHidden = !this.isPopupHidden
+  constructor(
+    public _mobileService: MobileService
+  ) {
   }
-
-  @Input() isItMobile: boolean;
 }

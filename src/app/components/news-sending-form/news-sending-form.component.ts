@@ -1,21 +1,20 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {INewsItem} from "../../models/news";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NewsService} from "../../services/news.service";
 import {DatePipe} from '@angular/common';
 import {CategoryService} from "../../services/category.service";
-import {tap} from "rxjs";
 import {ICategory} from "../../models/category";
 import {HttpClient} from "@angular/common/http";
 
 interface newsForm {
-  news_name: FormControl<string>;
-  short_describtion: FormControl<string>;
-  full_news: FormControl<string>;
-  audio_name: FormControl<string>;
-  img_name: FormControl<string>;
-  are_comments_disabled: FormControl<boolean>;
+  newsName: FormControl<string>;
+  shortDescribtion: FormControl<string>;
+  fullNews: FormControl<string>;
+  audioName: FormControl<string>;
+  imgName: FormControl<string>;
+  areCommentsDisabled: FormControl<boolean>;
   tags: FormControl<string>
 }
 
@@ -26,7 +25,6 @@ interface newsForm {
   providers: [DatePipe]
 })
 export class NewsSendingFormComponent implements OnInit {
-  public form!: FormGroup<newsForm>;
   private isFormEditingValueNow: boolean
   private currentNewsItem: INewsItem;
   private previousNewsValue: INewsItem;
@@ -35,6 +33,7 @@ export class NewsSendingFormComponent implements OnInit {
   public categories: ICategory[] = []
   public areCommentsDisabled:boolean
   public isButtonWarningOn: boolean = false
+  public form!: FormGroup<newsForm>;
 
   constructor(
     private _newsService: NewsService,
@@ -55,12 +54,12 @@ export class NewsSendingFormComponent implements OnInit {
     this.isFormEditingValueNow = this._activatedRoute.snapshot.data['newsResolver'] != null
 
     this.form = this._fb.nonNullable.group({
-      news_name: ['', [Validators.required, Validators.minLength(3)]],
-      short_describtion: ['', [Validators.required,Validators.minLength(3)]],
-      full_news: ['', [Validators.required, Validators.minLength(3)]],
-      audio_name: ['', [Validators.required, Validators.minLength(3)]],
-      img_name: ['', [Validators.required, Validators.minLength(3)]],
-      are_comments_disabled: [false, Validators.required],
+      newsName: ['', [Validators.required, Validators.minLength(3)]],
+      shortDescribtion: ['', [Validators.required,Validators.minLength(3)]],
+      fullNews: ['', [Validators.required, Validators.minLength(3)]],
+      audioName: ['', [Validators.required, Validators.minLength(3)]],
+      imgName: ['', [Validators.required, Validators.minLength(3)]],
+      areCommentsDisabled: [false, Validators.required],
       tags: ['']
     })
 
@@ -82,15 +81,15 @@ export class NewsSendingFormComponent implements OnInit {
         let categoriesPrepare = value.filter(
           (next) => {
             if (this.previousNewsValue)
-              return next.category_name == this.previousNewsValue.category
+              return next.categoryName == this.previousNewsValue.category
             else return false
           }
         )
 
         if (categoriesPrepare.length != 0) {
-          this.selectedCategory = categoriesPrepare[0].category_name
+          this.selectedCategory = categoriesPrepare[0].categoryName
         }else {
-          this.selectedCategory = this.categories[0].category_name
+          this.selectedCategory = this.categories[0].categoryName
         }
       }
     )
@@ -117,7 +116,7 @@ export class NewsSendingFormComponent implements OnInit {
       category: this.selectedCategory,
       tags: this.prepareTags(body.tags),
       date: this.currentDate,
-      is_disable_comments: this.areCommentsDisabled
+      isDisableComments: this.areCommentsDisabled
     }
 
     if (this.isFormEditingValueNow) {

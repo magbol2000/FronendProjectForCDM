@@ -1,6 +1,5 @@
 <div
   *ngIf="_errorService.error$ | async as error"
-  [ngClass]="{'notify__itIsNotTop' : !isHeaderInViewport}"
   class="notify"
 >
   <span class="notify__info spacer">{{ error }}</span>

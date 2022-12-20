@@ -8,8 +8,4 @@ import {INewsItem} from "../../models/news";
 })
 export class FullNewsComponent {
   @Input() newsItem: INewsItem;
-
-  constructor() {
-  }
-
 }

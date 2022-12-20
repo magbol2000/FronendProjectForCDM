@@ -7,14 +7,10 @@ import {ErrorService} from "../../services/error.service";
   styleUrls: ['./notify.component.scss']
 })
 export class NotifyComponent {
-  @Input() isHeaderInViewport: boolean
-
   constructor(
     public _errorService: ErrorService
   ) {
   }
-
-
 
   public onButton() {
     this._errorService.clear()

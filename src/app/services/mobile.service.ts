@@ -1,27 +1,23 @@
-import {Injectable, OnInit} from '@angular/core';
-import {BreakpointObserver, Breakpoints, BreakpointState} from "@angular/cdk/layout";
-import {Subject} from "rxjs";
+import {Injectable} from '@angular/core';
+import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
+import {map, Observable, Subject} from "rxjs";
+
+const moblieWidth = '(min-width: 768px)'
 
 @Injectable({
   providedIn: 'root'
 })
-export class MobileService implements OnInit{
+export class MobileService {
   isMobileWindow$ = new Subject<boolean>()
 
   constructor(
-    public _breakpointObserver: BreakpointObserver
+    private _breakpointObserver: BreakpointObserver
   ) {}
 
-  ngOnInit() {
-     this._breakpointObserver
-      .observe([Breakpoints.Medium, Breakpoints.HandsetPortrait])
-      .subscribe((state: BreakpointState) => {
-        if (state.matches) {
-          this.isMobileWindow$.next(true)
-        } else {
-          this.isMobileWindow$.next(false)
-        }
-      });
+  public isDesktop$(): Observable<boolean> {
+    return this._breakpointObserver.observe([moblieWidth]).pipe(
+      map((result: BreakpointState) => result.matches)
+    );
   }
 
 }

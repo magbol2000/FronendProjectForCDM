@@ -8,15 +8,15 @@ import {INewsItem} from "../../models/news";
 })
 export class GeneralNewsComponent {
   lastNewsItem: INewsItem = {
-    news_name: "loading",
-    full_news: "loading",
-    short_describtion: "loading",
+    newsName: "loading",
+    fullNews: "loading",
+    shortDescribtion: "loading",
     category: "loading",
-    audio_name: "#",
-    img_name: "#",
+    audioName: "#",
+    imgName: "#",
     tags: [],
     date: Date.prototype,
-    is_disable_comments: false
+    isDisableComments: false
   }
   @Input() isItGeneralPage: boolean
   @Input()
@@ -25,8 +25,4 @@ export class GeneralNewsComponent {
       this.lastNewsItem = lastNewsItem
     }
   }
-
-  constructor() {
-  }
-
 }

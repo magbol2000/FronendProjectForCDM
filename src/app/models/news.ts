@@ -1,12 +1,12 @@
 export interface INewsItem {
   id?: number,
-  news_name: string,
-  short_describtion: string,
-  full_news: string,
+  newsName: string,
+  shortDescribtion: string,
+  fullNews: string,
   category: string,
-  audio_name: string,
-  img_name: string,
+  audioName: string,
+  imgName: string,
   tags: string[],
   date: Date,
-  is_disable_comments?: boolean
+  isDisableComments?: boolean
 }

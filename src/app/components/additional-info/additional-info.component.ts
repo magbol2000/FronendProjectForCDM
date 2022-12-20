@@ -23,6 +23,4 @@ export class AdditionalInfoComponent {
     @Inject(LOCALE_ID) public _locale: string
   ) {
   }
-
-
 }

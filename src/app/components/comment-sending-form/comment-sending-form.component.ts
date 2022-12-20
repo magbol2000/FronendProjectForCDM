@@ -4,9 +4,9 @@ import {CommentService} from "../../services/comment.service";
 import {IComment} from "../../models/comment";
 
 interface commentForm {
-  user_name: FormControl<string>;
+  userName: FormControl<string>;
   message: FormControl<string>;
-  user_email: FormControl<string>;
+  userEmail: FormControl<string>;
 }
 
 @Component({
@@ -18,6 +18,8 @@ export class CommentSendingFormComponent implements OnInit {
   public form!: FormGroup<commentForm>;
   public isButtonWarningOn: boolean;
 
+  @Input() countOfComments: number;
+
   constructor(
     private _fb: FormBuilder,
     private _commentService: CommentService
@@ -26,9 +28,9 @@ export class CommentSendingFormComponent implements OnInit {
 
   ngOnInit() {
     this.form = this._fb.nonNullable.group({
-      user_name: ['', [Validators.required, Validators.minLength(3)]],
+      userName: ['', [Validators.required, Validators.minLength(3)]],
       message: ['', [Validators.required, Validators.minLength(3)]],
-      user_email: ['', [Validators.required, Validators.minLength(3)]],
+      userEmail: ['', [Validators.required, Validators.minLength(3)]],
     })
   }
 
@@ -42,7 +44,7 @@ export class CommentSendingFormComponent implements OnInit {
     let currentData: Date = new Date;
 
     let newComment: IComment = {
-      user_name: body.user_name,
+      userName: body.userName,
       message: body.message,
       data: currentData.toDateString()
     }
@@ -50,6 +52,4 @@ export class CommentSendingFormComponent implements OnInit {
       ()=> {window.location.reload();}
     )
   }
-
-  @Input() countOfComments: number;
 }

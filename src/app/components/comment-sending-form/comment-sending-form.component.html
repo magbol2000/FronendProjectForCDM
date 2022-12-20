@@ -1,3 +1,4 @@
+<script src="comment-sending-form.component.ts"></script>
 <form class="form" (ngSubmit)="submit()" [formGroup]="form">
   <div *ngIf="form.get('message') as message">
     <label class="form__label form__user-text">
@@ -10,26 +11,26 @@
     <app-form-error *ngIf="message.invalid && message.dirty" [error]="message.errors"></app-form-error>
   </div>
 
-  <div *ngIf="form.get('user_name') as user_name">
+  <div *ngIf="form.get('userName') as userName">
     <label class="form__label">Name*
       <input
         class="form__input form__field"
         type="text"
-        formControlName="user_name"
+        formControlName="userName"
       >
     </label>
-    <app-form-error *ngIf="user_name.invalid && user_name.dirty" [error]="user_name.errors"></app-form-error>
+    <app-form-error *ngIf="userName.invalid && userName.dirty" [error]="userName.errors"></app-form-error>
   </div>
 
-  <div *ngIf="form.get('user_email') as user_email">
+  <div *ngIf="form.get('userEmail') as userEmail">
     <label class="form__label">Email*
       <input
         class="form__input form__field"
         type="email"
-        formControlName="user_email"
+        formControlName="userEmail"
       >
     </label>
-    <app-form-error *ngIf="user_email.invalid && user_email.dirty" [error]="user_email.errors"></app-form-error>
+    <app-form-error *ngIf="userEmail.invalid && userEmail.dirty" [error]="userEmail.errors"></app-form-error>
   </div>
 
   <div>

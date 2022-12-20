@@ -34,10 +34,8 @@ export class CommentService {
       catchError(this.errorHandler.bind(this))
     )
   }
-
-  // Молодец, что использовал unknown вместо any.
-  // Но поскольку ты сам делал бек, то ты скорее всего знаешь, какие данные возвращаются, так что можно задать конкретный тип
-  public remove(id: number): Observable<unknown> {
+  
+  public remove(id: number): Observable<boolean | object> {
     return this._http.delete(`${this.api}${id}`).pipe(
       catchError(this.errorHandler.bind(this))
     )

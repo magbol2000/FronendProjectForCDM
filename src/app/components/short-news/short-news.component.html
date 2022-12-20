@@ -7,20 +7,20 @@
     <div class="news__header">
       <a [routerLink]="['/details', currentNewsItem.id]" class="news__url spacer">
         <h2 class="news__title">
-          {{ currentNewsItem.news_name }}
+          {{ currentNewsItem.newsName }}
         </h2>
       </a>
       <app-tags
-        *ngIf="!checkIsItMobileResolution()"
+        *ngIf="_mobileService.isDesktop$() | async"
         [tags]="currentNewsItem.tags"
       ></app-tags>
 
     </div>
     <div class="news__short-description">
-      {{ currentNewsItem.short_describtion }}
+      {{ currentNewsItem.shortDescribtion }}
     </div>
     <app-tags
-      *ngIf="checkIsItMobileResolution()"
+      *ngIf="!(_mobileService.isDesktop$() | async)"
       [tags]="currentNewsItem.tags"
     ></app-tags>
   </div>

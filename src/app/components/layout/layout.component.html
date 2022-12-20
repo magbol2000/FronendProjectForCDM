@@ -1,21 +1,10 @@
 <div class="layout">
   <header class="layout__header">
-    <app-menu
-      [isItMobile]="isItMobile"
-      (isPopupHidden)="getHamburgerState($event)"
-    ></app-menu>
-    <div class="spacer"></div>
-<!--    Условие переписать проще можно-->
-    <div class="header__navbar" *ngIf="!isPopupHidden || !isItMobile">
-      <app-nav [isItMobile]="isItMobile"></app-nav>
-    </div>
+    <app-menu></app-menu>
   </header>
 
   <main class="layout__main">
-<!--    Писал по этому поводу-->
-    <app-notify
-      [isHeaderInViewport]="isHeaderInViewport"
-    ></app-notify>
+    <app-notify></app-notify>
     <div class="layout__wrapper">
       <router-outlet></router-outlet>
     </div>

@@ -13,11 +13,9 @@
   justify-content: center;
   align-items: center;
 
-  &__itIsNotTop {
-    position: fixed;
-    width: 100%;
-    top: 0px;
-  }
+  position: fixed;
+  width: 100%;
+  top: 0px;
 
   &__info {
     white-space: normal;

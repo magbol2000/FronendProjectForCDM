@@ -3,6 +3,6 @@
     [setNewsItem]="newsItem"
   ></app-general-news>
   <app-full-news [newsItem]="newsItem"></app-full-news>
-  <app-reply *ngIf="!newsItem.is_disable_comments"></app-reply>
-  <app-comments *ngIf="!newsItem.is_disable_comments"></app-comments>
+  <app-reply *ngIf="!newsItem.isDisableComments"></app-reply>
+  <app-comments *ngIf="!newsItem.isDisableComments"></app-comments>
 </div>

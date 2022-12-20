@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component} from '@angular/core';
+import {MobileService} from "../../services/mobile.service";
 
 @Component({
   selector: 'app-menu',
@@ -6,12 +7,11 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  @Input() isItMobile: boolean;
-  @Output() isPopupHidden = new EventEmitter<boolean>();
   isPopupHiddenCounter: boolean = true
 
-  public onClickHamburger() {
-    this.isPopupHiddenCounter = !this.isPopupHiddenCounter
-    this.isPopupHidden.emit(this.isPopupHiddenCounter)
+  constructor(
+    public _mobileService: MobileService
+  ) {
   }
+
 }
