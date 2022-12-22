@@ -1,4 +1,4 @@
-import {Component, Inject, Input, LOCALE_ID, OnInit} from '@angular/core';
+import {Component, Inject, Input, LOCALE_ID} from '@angular/core';
 import {INewsItem} from "../../models/news";
 import {formatDate} from "@angular/common";
 
@@ -12,15 +12,16 @@ export class AdditionalInfoComponent {
   newsItem: INewsItem;
 
   @Input() isItShortNews: boolean;
+
+  constructor(
+    @Inject(LOCALE_ID) public _locale: string
+  ) {
+  }
+
   @Input() set setNewsItem(newsItem: INewsItem) {
     this.newsItem = newsItem
     let newsDate = formatDate(Date.now(), 'mediumDate', this._locale);
     let newsItemDate = formatDate(newsItem.date, 'mediumDate', this._locale)
     this.isNewsNew = newsDate === newsItemDate
-  }
-
-  constructor(
-    @Inject(LOCALE_ID) public _locale: string
-  ) {
   }
 }

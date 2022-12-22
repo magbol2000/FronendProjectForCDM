@@ -10,7 +10,8 @@
       [setNewsItem]="lastNewsItem"
     ></app-additional-info>
   </div>
-  <audio class="short-news-of-the-day__audio" controls src="{{lastNewsItem.audioName}}" alt="Audio for short news of the day"></audio>
+  <audio alt="Audio for short news of the day" class="short-news-of-the-day__audio" controls
+         src="{{lastNewsItem.audioName}}"></audio>
   <div>
     <h3 class="short-news-of-the-day__listen-on-text">Listen on</h3>
     <div class="short-news-of-the-day__social-media">

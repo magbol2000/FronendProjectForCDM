@@ -4,12 +4,13 @@
 
     <div class="spacer"></div>
 
-    <button *ngIf="!(_mobileService.isDesktop$() | async)" class="menu__hamburger" (click)="isPopupHiddenCounter = !isPopupHiddenCounter">
+    <button (click)="isPopupHiddenCounter = !isPopupHiddenCounter" *ngIf="!(_mobileService.isDesktop$() | async)"
+            class="menu__hamburger">
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
   <div class="spacer"></div>
-  <div *ngIf="!isPopupHiddenCounter || (_mobileService.isDesktop$() | async)" class="menu__navbar" >
+  <div *ngIf="!isPopupHiddenCounter || (_mobileService.isDesktop$() | async)" class="menu__navbar">
     <app-nav></app-nav>
   </div>
 </div>

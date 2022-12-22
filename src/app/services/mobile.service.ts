@@ -12,7 +12,8 @@ export class MobileService {
 
   constructor(
     private _breakpointObserver: BreakpointObserver
-  ) {}
+  ) {
+  }
 
   public isDesktop$(): Observable<boolean> {
     return this._breakpointObserver.observe([moblieWidth]).pipe(

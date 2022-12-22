@@ -1,0 +1,40 @@
+.modal-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  &__header {
+    display: flex;
+  }
+
+  &__buttons-group {
+    display: flex;
+  }
+
+  &__button {
+    align-items: center;
+    padding: 10px 30px;
+    color: white;
+    background: var(--selection-text-color);
+    border-radius: 4px;
+  }
+
+  &__content {
+    padding: 20px;
+    background: #FFFFFF;
+    min-width: 300px;
+    min-height: 100px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+  }
+}

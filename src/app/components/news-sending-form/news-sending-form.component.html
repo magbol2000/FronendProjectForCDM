@@ -18,12 +18,13 @@
         formControlName="shortDescribtion"
       ></textarea>
     </label>
-    <app-form-error *ngIf="shortDescribtion.invalid && shortDescribtion.dirty" [error]="shortDescribtion.errors"></app-form-error>
+    <app-form-error *ngIf="shortDescribtion.invalid && shortDescribtion.dirty"
+                    [error]="shortDescribtion.errors"></app-form-error>
   </div>
 
   <div>
     <label class="form__label">Category*
-      <select class="form__category" (change)="onCategorySelected($event)">
+      <select (change)="onCategorySelected($event)" class="form__category">
         <option *ngFor="let category of categories"
                 [selected]="category.categoryName == selectedCategory"
                 value="{{category.categoryName}}">
@@ -68,20 +69,20 @@
 
   <div>
     <label class="form__label">Enter tags separated by space
-    <input
-      class="form__input form__field"
-      formControlName="tags"
-      type="text"
-    />
+      <input
+        class="form__input form__field"
+        formControlName="tags"
+        type="text"
+      />
     </label>
   </div>
 
   <div>
     <label class="form__label-checkbox">
-      <input type="checkbox"
+      <input (change)="areCommentsDisabled = !areCommentsDisabled"
              [checked]=areCommentsDisabled
-             (change)="areCommentsDisabled = !areCommentsDisabled"
              formControlName="areCommentsDisabled"
+             type="checkbox"
       />
       Are comments disabled?
     </label>
@@ -94,6 +95,6 @@
     >Send
     </button>
 
-    <div class="form__error-message" *ngIf="isButtonWarningOn">Please fill all fields*</div>
+    <div *ngIf="isButtonWarningOn" class="form__error-message">Please fill all fields*</div>
   </div>
 </form>

@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {IComment} from "../../../models/comment";
 import {CommentService} from "../../../services/comment.service";
-import { Location } from '@angular/common'
+import {Location} from '@angular/common'
 
 @Component({
   selector: 'app-comment-remove',

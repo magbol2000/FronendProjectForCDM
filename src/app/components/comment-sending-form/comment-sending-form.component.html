@@ -1,5 +1,5 @@
 <script src="comment-sending-form.component.ts"></script>
-<form class="form" (ngSubmit)="submit()" [formGroup]="form">
+<form (ngSubmit)="submit()" [formGroup]="form" class="form">
   <div *ngIf="form.get('message') as message">
     <label class="form__label form__user-text">
       Comment
@@ -15,8 +15,8 @@
     <label class="form__label">Name*
       <input
         class="form__input form__field"
-        type="text"
         formControlName="userName"
+        type="text"
       >
     </label>
     <app-form-error *ngIf="userName.invalid && userName.dirty" [error]="userName.errors"></app-form-error>
@@ -26,8 +26,8 @@
     <label class="form__label">Email*
       <input
         class="form__input form__field"
-        type="email"
         formControlName="userEmail"
+        type="email"
       >
     </label>
     <app-form-error *ngIf="userEmail.invalid && userEmail.dirty" [error]="userEmail.errors"></app-form-error>
@@ -41,6 +41,6 @@
       Send
     </button>
 
-    <div class="form__error-message" *ngIf="isButtonWarningOn">Please fill all fields*</div>
+    <div *ngIf="isButtonWarningOn" class="form__error-message">Please fill all fields*</div>
   </div>
 </form>

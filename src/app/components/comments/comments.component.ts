@@ -8,8 +8,8 @@ import {IComment} from "../../models/comment";
   styleUrls: ['./comments.component.scss']
 })
 export class CommentsComponent implements OnInit {
-  comments: IComment[]
-  reverseComments: IComment[]
+  comments: IComment[];
+  reverseComments: IComment[];
   countOfComments: number;
 
   constructor(
@@ -22,7 +22,7 @@ export class CommentsComponent implements OnInit {
       value => {
         this.comments = value;
         this.countOfComments = this.comments.length;
-        this.reverseComments = this.comments
+        this.reverseComments = this.comments;
       }
     )
   }

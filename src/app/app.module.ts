@@ -31,8 +31,9 @@ import {FilterCategoriesPipe} from './pipes/filter-categories.pipe'
 import {NotFoundComponent} from './pages/not-found/not-found.component'
 import {NotifyComponent} from "./components/notify/notify.component";
 import {SearchComponent} from './pages/categories/search/search.component';
-import { CommentRemoveComponent } from './pages/comments/comment-remove/comment-remove.component';
-import { FormErrorComponent } from './components/form-error/form-error.component';
+import {CommentRemoveComponent} from './pages/comments/comment-remove/comment-remove.component';
+import {FormErrorComponent} from './components/form-error/form-error.component';
+import {ModalWindowComponent} from './components/modal-window/modal-window.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { FormErrorComponent } from './components/form-error/form-error.component
     NotifyComponent,
     SearchComponent,
     CommentRemoveComponent,
-    FormErrorComponent
+    FormErrorComponent,
+    ModalWindowComponent
   ],
   imports: [
     BrowserModule,

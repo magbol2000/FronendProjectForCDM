@@ -49,7 +49,9 @@ export class CommentSendingFormComponent implements OnInit {
       data: currentData.toDateString()
     }
     this._commentService.create(newComment).subscribe(
-      ()=> {window.location.reload();}
+      () => {
+        window.location.reload();
+      }
     )
   }
 }

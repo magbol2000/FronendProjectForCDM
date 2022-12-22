@@ -12,13 +12,14 @@ export class GeneralNewsComponent {
     fullNews: "loading",
     shortDescribtion: "loading",
     category: "loading",
-    audioName: "#",
-    imgName: "#",
+    audioName: "assets/music/Template.mp3",
+    imgName: "",
     tags: [],
     date: Date.prototype,
     isDisableComments: false
   }
   @Input() isItGeneralPage: boolean
+
   @Input()
   set setNewsItem(lastNewsItem: INewsItem) {
     if (lastNewsItem != null) {

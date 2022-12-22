@@ -1,18 +1,18 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CommentRemoveComponent} from './comment-remove.component';
+import {ModalWindowComponent} from './modal-window.component';
 
-describe('CommentRemoveComponent', () => {
-  let component: CommentRemoveComponent;
-  let fixture: ComponentFixture<CommentRemoveComponent>;
+describe('ModalWindowComponent', () => {
+  let component: ModalWindowComponent;
+  let fixture: ComponentFixture<ModalWindowComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CommentRemoveComponent]
+      declarations: [ModalWindowComponent]
     })
       .compileComponents();
 
-    fixture = TestBed.createComponent(CommentRemoveComponent);
+    fixture = TestBed.createComponent(ModalWindowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

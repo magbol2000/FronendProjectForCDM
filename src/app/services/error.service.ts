@@ -10,6 +10,7 @@ export class ErrorService {
   constructor() {
   }
 
+
   handle(message: string) {
     this.error$.next(message)
   }

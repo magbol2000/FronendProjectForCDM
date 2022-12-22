@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {ErrorService} from "./error.service";
 import {catchError, Observable, throwError} from "rxjs";
@@ -11,7 +11,8 @@ export class CommentService {
   constructor(
     private _http: HttpClient,
     private _errorService: ErrorService
-  ) { }
+  ) {
+  }
 
   get api() {
     return `http://localhost:3000/comments/`;
@@ -34,7 +35,7 @@ export class CommentService {
       catchError(this.errorHandler.bind(this))
     )
   }
-  
+
   public remove(id: number): Observable<boolean | object> {
     return this._http.delete(`${this.api}${id}`).pipe(
       catchError(this.errorHandler.bind(this))

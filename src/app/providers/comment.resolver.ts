@@ -1,10 +1,6 @@
-import { Injectable } from '@angular/core';
-import {
-  Router, Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
-} from '@angular/router';
-import {finalize, Observable, of} from 'rxjs';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot} from '@angular/router';
+import {finalize, Observable} from 'rxjs';
 import {GlobalStates} from "./global.states";
 import {CommentService} from "../services/comment.service";
 import {IComment} from "../models/comment";

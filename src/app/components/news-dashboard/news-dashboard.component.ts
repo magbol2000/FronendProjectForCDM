@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {INewsItem} from "../../models/news";
 import {NewsService} from "../../services/news.service";
-import {tap} from "rxjs";
+import {Subscription, tap} from "rxjs";
 
 @Component({
   selector: 'app-news-dashboard',
@@ -9,9 +9,11 @@ import {tap} from "rxjs";
   styleUrls: ['./news-dashboard.component.scss']
 })
 export class NewsDashboardComponent implements OnInit {
+  private subscriptionNewsService$: Subscription;
   reversedNewsGroup: INewsItem[];
   loading: boolean = false;
   lastNewsItem: INewsItem;
+
 
   @Input() searchQuery: string = '';
   @Output() lastNewsItemFromOutput = new EventEmitter<{ NewsItem: INewsItem }>();
@@ -23,7 +25,7 @@ export class NewsDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true;
-    this._newsService.getAll().pipe(
+    this.subscriptionNewsService$ = this._newsService.getAll().pipe(
       tap(() => {
         this.loading = false
       }),
@@ -34,6 +36,9 @@ export class NewsDashboardComponent implements OnInit {
         this.lastNewsItemFromOutput.emit({NewsItem: this.lastNewsItem});
       }
     )
+  }
 
+  ngOnDestroy() {
+    this.subscriptionNewsService$.unsubscribe()
   }
 }
